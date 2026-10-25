@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Casa Bö · Playa Langosta, Costa Rica</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Century+Gothic:wght@400;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,200;0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,300&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,400&family=Roboto:wght@100&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --cream:#FAF8F4; --sand:#F0EBE1; --sand-d:#E2D9CC; --bark:#DCD0B9; --mud:#5C4A35;
+  --ink:#1A1814; --ink-m:#3C3830; --ink-l:#8A847A;
+  --teal:#2BBFB3; --teal-d:#1A9E93;
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --sans:'DM Sans',sans-serif;
+}
+html{scroll-behavior:auto;}
+body{background:var(--cream);color:var(--ink);font-family:var(--sans);font-weight:300;overflow-x:hidden;cursor:none;}
+
+/* CURSOR */
+#cursor{position:fixed;width:9px;height:9px;background:var(--ink);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:width .25s,height .25s,background .3s;mix-blend-mode:difference;}
+#cursor-ring{position:fixed;width:34px;height:34px;border:1px solid rgba(26,24,20,.3);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);}
+body:has(a:hover) #cursor,body:has(button:hover) #cursor{width:24px;height:24px;background:var(--teal);}
+::-webkit-scrollbar{width:2px;} ::-webkit-scrollbar-track{background:var(--sand);} ::-webkit-scrollbar-thumb{background:var(--teal);}
+
+/* NAV */
+nav{position:fixed;top:20px;left:50%;transform:translateX(-50%);z-index:300;width:calc(100% - 64px);max-width:1320px;background:var(--ink);border-radius:100px;padding:0 14px 0 40px;height:68px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;}
+.nav-links-left{display:flex;gap:30px;list-style:none;}
+.nav-logo{display:flex;align-items:center;justify-content:center;text-decoration:none;padding:0 26px;}
+.nav-logo-img{width:48px;height:48px;object-fit:contain;filter:invert(1) brightness(10);}
+.nav-right{display:flex;align-items:center;justify-content:flex-end;gap:26px;}
+.nav-links-right{display:flex;gap:30px;list-style:none;}
+.nav-links-left a,.nav-links-right a{font-family:var(--sans);font-size:.95rem;font-weight:300;letter-spacing:.1em;color:rgba(250,248,244,.7);text-decoration:none;white-space:nowrap;transition:color .25s;}
+.nav-links-left a:hover,.nav-links-right a:hover{color:var(--teal);}
+.nav-cta{font-size:.9rem;font-weight:500;letter-spacing:.1em;background:var(--cream);color:var(--ink);padding:13px 26px;border-radius:100px;text-decoration:none;white-space:nowrap;transition:background .25s,color .25s;}
+.nav-cta:hover{background:var(--teal);color:var(--ink);}
+.nav-cta .ch{transition:color .15s;}
+.nav-cta .ch:hover{color:#A1434C;}
+
+/* LANG SWITCHER, fixed right side */
+.lang-switcher{
+  position:fixed; right:20px; top:50%; transform:translateY(-50%);
+  z-index:400;
+  display:flex; flex-direction:column; align-items:center; gap:0;
+  background:var(--ink); border-radius:100px;
+  padding:6px 0;
+  box-shadow:0 4px 20px rgba(26,24,20,.18);
+}
+.lang-btn{
+  background:none; border:none;
+  font-family:var(--sans); font-size:.6rem; font-weight:500; letter-spacing:.1em;
+  color:rgba(250,248,244,.4); cursor:pointer;
+  padding:8px 12px; line-height:1;
+  transition:color .2s;
+  width:100%;
+}
+.lang-btn:hover{color:rgba(250,248,244,.85);}
+.lang-btn.active{color:var(--teal);}
+.lang-sep{width:20px; height:1px; background:rgba(255,255,255,.08);}
+@media(max-width:560px){
+  .lang-switcher{right:10px; top:auto; bottom:24px; transform:none; flex-direction:row; padding:0 6px; border-radius:100px;}
+  .lang-sep{width:1px; height:14px;}
+  .lang-btn{padding:10px 8px;}
+}
+
+/* HERO */
+#hero{position:relative;height:110svh;min-height:700px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;overflow:visible;}
+.hero-video{position:absolute;inset:0;z-index:0;overflow:hidden;}
+.hero-video video{width:100%;height:100%;object-fit:cover;object-position:center;display:block;transform:scale(1.714);transform-origin:66.1% 79.65%;}
+.hero-video::after{content:'';position:absolute;inset:0;background:rgba(18,14,9,.38);}
+.hero-content{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;padding:0 32px;margin-top:300px;}
+.hero-eyebrow{font-size:.63rem;font-weight:400;letter-spacing:.3em;text-transform:uppercase;color:rgba(255,255,255,.65);margin-top:22px;}
+.hero-h1{font-family:var(--sans);font-weight:200;color:var(--cream);letter-spacing:.01em;display:flex;flex-direction:column;align-items:center;gap:4px;}
+.hero-h1-top{font-size:.63rem;font-weight:700;letter-spacing:.25em;color:rgba(255,255,255,.7);font-family:var(--sans);font-style:normal;text-transform:uppercase;}
+.hero-h1 em{font-style:normal;display:block;font-size:clamp(4.5rem,10vw,9.5rem);line-height:.9;font-weight:400;font-family:'Century Gothic',sans-serif;letter-spacing:.02em;text-transform:lowercase;-webkit-text-stroke:.6px currentColor;}
+.hero-tagline{margin-top:22px;font-family:var(--serif);font-size:clamp(1.4rem,2.6vw,2rem);font-style:italic;font-weight:300;color:rgba(255,255,255,.62);}
+.hero-arch{position:absolute;bottom:0;left:0;right:0;z-index:3;line-height:0;pointer-events:none;}
+.hero-arch svg{display:block;width:100%;overflow:visible;}
+.hero-arch-pill{display:none;}
+.hero-arch-pill-text{display:none;}
+
+/* INTRO */
+#intro{padding:100px 48px;background:var(--cream);margin-top:-158px;padding-top:165px;padding-bottom:50px;}
+.intro-inner{max-width:1240px;margin:0 auto;}
+.intro-heading-row{margin-bottom:48px;}
+.intro-h2{font-style:italic;font-family:var(--serif);font-size:clamp(1.8rem,3vw,3rem);font-weight:300;line-height:1.1;color:var(--ink);margin-bottom:12px;}
+.intro-h2 em{font-style:italic;color:var(--ink);}
+.intro-subline{font-family:var(--serif);font-size:clamp(1.8rem,3vw,3rem);font-style:italic;font-weight:300;color:var(--ink);text-transform:lowercase;margin-bottom:28px;}
+.intro-cols{display:flex;flex-direction:column;align-items:center;text-align:center;max-width:900px;margin:0 auto;}
+.intro-photo{display:none;}
+.intro-photo img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s cubic-bezier(.23,1,.32,1);}
+.intro-photo:hover img{transform:scale(1.03);}
+.intro-body{font-size:1.04rem;line-height:1.9;color:var(--ink-m);font-weight:300;text-align:center;}
+.intro-body p+p{margin-top:18px;}
+.intro-stats{display:flex;flex-wrap:wrap;gap:40px;justify-content:center;margin-top:32px;}
+.intro-stat{display:flex;flex-direction:column;align-items:center;gap:16px;}
+.intro-stat-num{font-family:var(--serif);font-size:2.4rem;font-weight:400;color:var(--teal-d);line-height:1;}
+.intro-stat-label{font-size:.72rem;font-weight:400;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-l);}
+.intro-btns{margin-top:36px;display:flex;gap:12px;align-items:center;flex-wrap:wrap;justify-content:center;}
+.btn-pill{display:inline-block;padding:13px 28px;border-radius:6px;font-size:.67rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;transition:transform .2s,background .3s,color .3s;}
+.btn-pill:hover{transform:translateY(-2px);}
+.btn-pill.solid{background:var(--ink);color:var(--cream);}
+.btn-pill.solid:hover{background:var(--teal);color:var(--ink);}
+.btn-pill.outline{border:1.5px solid var(--sand-d);color:var(--ink-m);}
+.btn-pill.outline:hover{border-color:var(--teal);color:var(--teal-d);}
+
+/* GALLERY */
+#gallery{padding:40px 48px 90px;background:var(--cream);}
+.gallery-inner{max-width:1240px;margin:0 auto;}
+.photo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
+.pcell{border-radius:6px;overflow:hidden;aspect-ratio:4/3;}
+.pcell img{width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.23,1,.32,1);display:block;}
+.pcell:hover img{transform:scale(1.05);}
+@media(max-width:860px){.photo-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:560px){.photo-grid{grid-template-columns:1fr;}}
+
+/* FEATURES */
+#features{padding:100px 48px;background:var(--sand);}
+.feat-inner{max-width:1240px;margin:0 auto;}
+.section-head{margin-bottom:56px;}
+.section-label{font-size:.62rem;font-weight:500;letter-spacing:.26em;text-transform:uppercase;color:var(--teal-d);margin-bottom:14px;display:flex;align-items:center;gap:10px;}
+.section-h2{font-style:italic;font-family:var(--serif);font-size:clamp(2rem,3.8vw,3.4rem);font-weight:300;color:var(--ink);line-height:1.08;}
+.section-h2 em{font-style:italic;color:inherit;}
+.section-blurb{font-size:.95rem;line-height:1.82;color:var(--ink-m);font-weight:300;margin-top:16px;max-width:680px;}
+.feat-rows{display:flex;flex-direction:column;}
+.feat-row{display:grid;grid-template-columns:52px 1fr 1.1fr;gap:28px;align-items:start;padding:32px 0;border-bottom:1px solid var(--sand-d);transition:padding-left .25s;}
+.feat-row:first-child{border-top:1px solid var(--sand-d);}
+.feat-row:hover{padding-left:10px;}
+.feat-n{font-family:var(--serif);font-size:.95rem;color:var(--teal);padding-top:3px;}
+.feat-name{font-family:var(--serif);font-size:1.35rem;font-weight:400;color:var(--ink);line-height:1.2;}
+.feat-desc{font-size:.88rem;line-height:1.78;color:var(--ink-l);font-weight:300;}
+
+/* SLIDESHOW */
+#slideshow{position:relative;height:100vh;height:100svh;min-height:480px;overflow:hidden;background:var(--ink);}
+.ss-track{position:relative;width:100%;height:100%;}
+.ss-slide{
+  position:absolute;inset:0;
+  background-size:cover;background-position:center;
+  opacity:0;transition:opacity 1s cubic-bezier(.4,0,.2,1);
+  display:flex;align-items:flex-end;
+}
+.ss-slide.active{opacity:1;z-index:1;}
+.ss-slide.leaving{opacity:0;z-index:0;}
+.ss-overlay{position:absolute;inset:0;background:rgba(18,14,9,.35);}
+.ss-caption{
+  position:relative;z-index:2;
+  padding:0 64px 80px;
+}
+.ss-caption-label{
+  font-size:.62rem;font-weight:500;letter-spacing:.26em;text-transform:uppercase;
+  color:rgba(255,255,255,.6);margin-bottom:12px;
+}
+.ss-caption-title{display:none;}
+
+/* arrows */
+.ss-btn{
+  position:absolute;top:50%;transform:translateY(-50%);z-index:10;
+  background:rgba(250,248,244,.12);backdrop-filter:blur(6px);
+  border:1px solid rgba(255,255,255,.18);border-radius:6px;
+  width:52px;height:52px;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+  color:rgba(255,255,255,.8);transition:background .25s,color .25s;
+}
+.ss-btn:hover{background:rgba(43,191,179,.25);color:var(--teal);}
+.ss-btn svg{width:20px;height:20px;}
+.ss-prev{left:28px;}
+.ss-next{right:28px;}
+
+/* dots */
+.ss-dots{
+  position:absolute;bottom:32px;left:50%;transform:translateX(-50%);
+  z-index:10;display:flex;gap:8px;align-items:center;
+}
+.ss-dot{
+  width:6px;height:6px;border-radius:50%;
+  background:rgba(255,255,255,.35);border:none;cursor:pointer;padding:0;
+  transition:background .3s,transform .3s;
+}
+.ss-dot.active{background:var(--teal);transform:scale(1.4);}
+
+/* explore button */
+.ss-explore-btn{
+  position:absolute;bottom:32px;right:64px;z-index:10;
+  font-family:var(--sans);font-size:.68rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--ink);background:var(--cream);
+  text-decoration:none;padding:12px 24px;border-radius:100px;
+  transition:background .25s,color .25s,transform .2s;
+}
+.ss-explore-btn:hover{background:var(--teal);color:var(--ink);transform:translateY(-2px);}
+
+@media(max-width:768px){
+  .ss-caption{padding:0 24px 72px;}
+  .ss-prev{left:12px;} .ss-next{right:12px;}
+  .ss-btn{width:40px;height:40px;}
+  .ss-explore-btn{right:24px;bottom:68px;}
+}
+
+
+
+/* BEDROOMS */
+#bedrooms{padding:100px 48px;background:var(--cream);}
+.bed-inner{max-width:1240px;margin:0 auto;}
+.bed-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:52px;}
+.bed-card{border-radius:4px;overflow:hidden;background:var(--sand);transition:transform .4s cubic-bezier(.23,1,.32,1),box-shadow .4s;}
+.bed-card:hover{transform:translateY(-6px);box-shadow:0 20px 50px rgba(26,24,20,.1);}
+.bed-img{height:240px;overflow:hidden;}
+.bed-img img{width:100%;height:100%;object-fit:cover;transition:transform .7s cubic-bezier(.23,1,.32,1);display:block;}
+.bed-card:hover .bed-img img{transform:scale(1.06);}
+.bed-info{padding:24px;}
+.bed-name{font-family:var(--serif);font-size:1.1rem;font-weight:400;color:var(--ink);margin-bottom:4px;}
+.bed-spec{font-size:.78rem;color:var(--ink-l);font-weight:300;}
+
+/* OCCASIONS */
+#occasions{padding:100px 48px;background:var(--sand);}
+.occ-inner{max-width:1240px;margin:0 auto;}
+.occ-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:52px;}
+.occ-card{border-radius:4px;overflow:hidden;min-height:380px;position:relative;display:flex;flex-direction:column;justify-content:flex-end;padding:28px 22px;cursor:pointer;transition:transform .5s cubic-bezier(.23,1,.32,1);}
+.occ-card:hover{transform:translateY(-8px);}
+.occ-photo{position:absolute;inset:0;background-size:cover;background-position:center;transition:transform .8s cubic-bezier(.23,1,.32,1);}
+.occ-card:hover .occ-photo{transform:scale(1.06);}
+.occ-overlay{position:absolute;inset:0;background:rgba(18,14,9,.50);}
+.occ-photo.c1{background:#1A6E6A url('https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6NDYzNTUxMjI%3D/original/ba8e86ef-c1ce-44ef-b34e-7676cf56cf66.jpeg') center/cover no-repeat;}
+.occ-photo.c2{background:#5C3A22 url('https://a0.muscache.com/im/pictures/miso/Hosting-46355122/original/289811b6-941e-4fb7-9e33-263da2511100.jpeg') center/cover no-repeat;}
+.occ-photo.c3{background:#2A4A2A url('https://a0.muscache.com/im/pictures/de5e6734-7b39-4022-9690-95dd60506ba9.jpg') center/cover no-repeat;}
+.occ-photo.c4{background:#1A2A4A url('https://a0.muscache.com/im/pictures/ba95d89d-3c50-4e63-bbeb-52056bb40a17.jpg') center/cover no-repeat;}
+.occ-content{position:relative;z-index:2;}
+.occ-tag{font-size:.58rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-bottom:6px;}
+.occ-name{font-family:var(--serif);font-size:1.55rem;font-weight:300;font-style:normal;color:var(--cream);line-height:1.2;}
+.occ-line{margin-top:14px;width:26px;height:1.5px;background:var(--teal);transition:width .4s;}
+.occ-card:hover .occ-line{width:52px;}
+
+/* REVIEWS */
+#reviews{padding:100px 48px;background:var(--bark);}
+.rev-inner{max-width:1240px;margin:0 auto;}
+.rev-inner .section-h2{color:var(--ink);}
+.rev-score-row{display:flex;align-items:center;gap:32px;margin-bottom:56px;flex-wrap:wrap;}
+.rev-big-score{font-family:var(--serif);font-size:7rem;font-weight:300;color:var(--ink);line-height:1;}
+.rev-score-info{display:flex;flex-direction:column;gap:6px;}
+.rev-stars-row{display:flex;gap:4px;}
+.rev-stars-row span{color:var(--teal-d);font-size:1.1rem;}
+.rev-score-label{font-size:.75rem;color:var(--ink-m);font-weight:300;}
+.rev-score-label strong{color:var(--ink);font-weight:500;}
+.gf-badge{margin-left:auto;padding:14px 22px;border-radius:4px;border:1.5px solid rgba(26,24,20,.2);text-align:center;display:flex;flex-direction:column;align-items:center;gap:4px;}
+.gf-icon{font-size:1.3rem;}
+.gf-label{font-size:.58rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-l);}
+.gf-sub{font-size:.7rem;color:var(--ink-m);font-weight:300;max-width:140px;text-align:center;line-height:1.4;}
+.rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
+.rev-card{background:var(--cream);border-radius:4px;padding:32px;position:relative;border:1.5px solid rgba(26,24,20,.1);transition:border-color .3s,transform .4s cubic-bezier(.23,1,.32,1);}
+.rev-card:hover{border-color:var(--teal);transform:translateY(-5px);}
+.rev-card-stars{display:flex;gap:2px;margin-bottom:16px;}
+.rev-card-stars span{color:var(--teal-d);font-size:.78rem;}
+.rev-text{font-family:var(--serif);font-size:1.05rem;font-style:italic;font-weight:300;color:var(--ink);line-height:1.68;margin-bottom:20px;}
+.rev-who{font-size:.6rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-l);}
+.rev-ghost{font-family:var(--serif);font-size:3rem;font-weight:300;color:rgba(43,191,179,.1);position:absolute;bottom:18px;right:20px;line-height:1;}
+
+/* LOCATION */
+
+/* CTA */
+#cta{padding:130px 48px;text-align:center;background:var(--ink);position:relative;overflow:hidden;}
+#cta::before{display:none;}
+.cta-logo-watermark{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:500px;height:500px;opacity:.03;pointer-events:none;}
+.cta-logo-watermark img{width:100%;height:100%;object-fit:contain;filter:invert(1);}
+.cta-in{position:relative;z-index:1;max-width:700px;margin:0 auto;}
+.cta-eyebrow{font-style:italic;font-family:var(--serif);font-size:clamp(2rem,4vw,3.6rem);font-weight:300;line-height:1;text-transform:none;letter-spacing:0;color:var(--cream);margin-bottom:22px;text-align:center;}
+.cta-sub{font-size:.98rem;color:rgba(250,248,244,.42);line-height:1.8;margin-bottom:44px;font-weight:300;}
+.cta-btns{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;}
+.btn-pill-light{display:inline-block;padding:14px 30px;border-radius:6px;font-size:.67rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;transition:transform .2s,background .3s;}
+.btn-pill-light.solid{background:var(--teal);color:var(--ink);}
+.btn-pill-light.solid:hover{background:var(--cream);transform:translateY(-2px);}
+.btn-pill-light.ghost{border:1.5px solid rgba(250,248,244,.18);color:rgba(250,248,244,.5);}
+.btn-pill-light.ghost:hover{border-color:var(--teal);color:var(--teal);transform:translateY(-2px);}
+
+/* FOOTER */
+footer{background:var(--ink);border-top:1px solid rgba(255,255,255,.06);padding:36px 48px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;}
+.foot-logo{display:flex;align-items:center;gap:10px;}
+.foot-logo img{width:28px;height:28px;object-fit:contain;filter:invert(1) brightness(3) opacity(.35);}
+.foot-logo-text{font-family:var(--serif);font-size:1.2rem;font-weight:300;color:rgba(250,248,244,.4);}
+.foot-logo-text span{font-style:italic;color:rgba(43,191,179,.6);}
+.foot-mid{font-size:.62rem;letter-spacing:.12em;color:rgba(250,248,244,.2);text-align:center;}
+.foot-r{font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(250,248,244,.18);}
+
+.stay-bg{position:absolute;left:0;top:-20%;width:100%;height:140%;object-fit:cover;object-position:center;will-change:transform;}
+/* REVEALS */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .88s cubic-bezier(.22,1,.36,1),transform .88s cubic-bezier(.22,1,.36,1);}
+.reveal.in{opacity:1;transform:none;}
+.rd1{transition-delay:.1s} .rd2{transition-delay:.2s} .rd3{transition-delay:.3s} .rd4{transition-delay:.4s}
+
+/* RESPONSIVE */
+@media(max-width:960px){
+  nav{width:calc(100% - 32px);padding:0 8px 0 20px;height:52px;top:12px;}
+  .nav-links-left li:nth-child(3){display:none;}
+  .nav-links-right{display:none;}
+  .nav-cta{padding:7px 14px;font-size:.6rem;}
+  .nav-logo-img{width:34px;height:34px;}
+  .intro-cols{grid-template-columns:1fr;}
+  #intro,#gallery,#features,#bedrooms,#occasions,#reviews,#cta{padding-left:24px;padding-right:24px;}
+  .gallery-grid{grid-template-columns:1fr 1fr;grid-template-rows:auto;}
+  .gcell.tall{grid-row:auto;}
+  .feat-row{grid-template-columns:44px 1fr;grid-template-rows:auto auto;}
+  .feat-desc{grid-column:2;}
+  .occ-grid{grid-template-columns:1fr 1fr;}
+  .rev-grid{grid-template-columns:1fr 1fr;}
+  .bed-grid{grid-template-columns:1fr 1fr;}
+  .gf-badge{display:none;}
+  body{cursor:auto;} #cursor,#cursor-ring{display:none;}
+  .hero-arch-pill{width:200px;bottom:14px;}
+  
+}
+@media(max-width:560px){
+  nav{grid-template-columns:1fr auto 1fr;}
+  .nav-links-left{display:none;}
+  .occ-grid,.rev-grid,.bed-grid{grid-template-columns:1fr;}
+  .gallery-grid{grid-template-columns:1fr;}
+  .hero-h1{font-size:2.8rem;}
+  .hero-arch-pill{width:160px;padding:12px 16px;bottom:10px;}
+  .hero-arch-pill-text{font-size:1rem;}
+}
+</style>
+</head>
+<body>
+<div id="cursor"></div>
+<div id="cursor-ring"></div>
+
+<!-- NAV -->
+<nav id="nav">
+  <ul class="nav-links-left">
+    <li><a href="#" data-i18n="nav.villa">Home</a></li>
+    <li><a href="the-space.html" data-i18n="nav.gallery">The Space</a></li>
+  </ul>
+  <a href="#" class="nav-logo">
+    <img src="casa_bo_logo.png" alt="Casa Bö logo" class="nav-logo-img">
+  </a>
+  <div class="nav-right">
+    <ul class="nav-links-right">
+      <li><a href="services.html" data-i18n="nav.services">Services</a></li>
+      <li><a href="location.html" data-i18n="nav.location">Location</a></li>
+      <li><a href="blog.html" data-i18n="nav.blog">Blog</a></li>
+    </ul>
+    <a href="book.html" class="nav-cta" data-i18n="nav.book">Book Now</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-video">
+    <video autoplay muted loop playsinline preload="auto">
+      <source src="diving_in_pool_casa_bo.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="hero-content">
+    <h1 class="hero-h1">
+      <em>Casa Bö</em>
+    </h1>
+    <p class="hero-tagline" data-i18n="hero.tagline">A luxurious beach retreat, steps from the sea.</p>
+    <div class="hero-eyebrow" data-i18n="hero.eyebrow">Playa Langosta · Guanacaste · Costa Rica</div>
+  </div>
+  <div class="hero-arch">
+    <svg viewBox="0 0 1440 160" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="display:block;width:100%;margin-bottom:-1px;">
+      <path d="M0,160 L0,0 Q720,160 1440,0 L1440,160 Z" fill="#FAF8F4"/>
+    </svg>
+    <div class="hero-arch-pill">
+      <div class="hero-arch-pill-text" data-i18n="hero.pill">Your Private<br>Paradise</div>
+    </div>
+  </div>
+</section>
+
+<!-- INTRO -->
+<section id="intro">
+  <div class="intro-inner">
+    <!-- Two columns: big photo left, heading + text right -->
+    <div class="intro-cols">
+      <div class="intro-photo reveal">
+        <img src="night.jpg" alt="Casa Bö at sunset" loading="lazy">
+      </div>
+      <div class="reveal rd2">
+        <h2 class="intro-h2" data-i18n="intro.heading">A sanctuary of <em>indoor–outdoor</em> living</h2>
+        <p class="intro-subline">Steps from the beach</p>
+        <div class="intro-body">
+          <p data-i18n="intro.p1">Welcome to Casa Bö, a luxurious vacation rental just steps from Playa Langosta and four minutes from Tamarindo's celebrated surf town, home to vibrant bars, refined restaurants, boutiques, spas, and legendary nightlife.</p>
+          <p data-i18n="intro.p2">Casa Bö's open-living concept invites you to reconnect with nature while enjoying every comfort of a luxury home. The merged indoor/outdoor space features a spectacular open-plan kitchen, custom-made Balinese furniture, and a living room that mirrors the stillness of a turquoise swimming pool set within a lush tropical garden.</p>
+        </div>
+        <div class="intro-stats">
+          <div class="intro-stat"><span class="intro-stat-num">3</span><span class="intro-stat-label" data-i18n="chips.bed">Bedrooms</span></div>
+          <div class="intro-stat"><span class="intro-stat-num">3</span><span class="intro-stat-label" data-i18n="chips.bath">Bathrooms</span></div>
+          <div class="intro-stat"><span class="intro-stat-num">8</span><span class="intro-stat-label" data-i18n="chips.guests">Guests</span></div>
+          <div class="intro-stat"><span class="intro-stat-num">5.0</span><span class="intro-stat-label">★ · 93 Reviews</span></div>
+        </div>
+        <div class="intro-btns">
+          <a href="book.html" class="btn-pill solid" data-i18n="nav.book">Book Now</a>
+          <a href="the-space.html" class="btn-pill outline" data-i18n="cta.see">See the Space</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+  <div class="gallery-inner">
+    <div class="photo-grid">
+      <div class="pcell reveal"><img src="gallery-1.jpg" alt="Pool and lounge deck" loading="lazy"></div>
+      <div class="pcell reveal rd1"><img src="gallery-4.jpg" alt="Dining pavilion" loading="lazy"></div>
+      <div class="pcell reveal rd2"><img src="gallery-2.jpg" alt="Living room" loading="lazy"></div>
+      <div class="pcell reveal"><img src="gallery-3.jpg" alt="Bedroom" loading="lazy"></div>
+      <div class="pcell reveal rd1"><img src="gallery-5.jpg" alt="Bathroom" loading="lazy"></div>
+      <div class="pcell reveal rd2"><img src="gallery-6.jpg" alt="Pool at night" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<!-- SLIDESHOW -->
+<section id="slideshow">
+  <div class="ss-track" id="ssTrack">
+
+    <div class="ss-slide active" style="background-image:url('pool2.jpg')">
+      <div class="ss-overlay"></div>
+      <div class="ss-caption">
+        <div class="ss-caption-label" data-i18n="pool.sublabel">Pool & Outdoor</div>
+        <div class="ss-caption-title">Your private <em data-i18n="pool.em">oasis</em></div>
+      </div>
+    </div>
+
+    <div class="ss-slide" style="background-image:url('https://a0.muscache.com/im/pictures/d36b5b71-9781-4763-adca-4e072e5d641d.jpg')">
+      <div class="ss-overlay"></div>
+      <div class="ss-caption">
+        <div class="ss-caption-label" data-i18n="bed.sublabel">Three bedrooms · Four bathrooms</div>
+        <div class="ss-caption-title">Where You'll <em data-i18n="bed.em_word">Sleep</em></div>
+      </div>
+    </div>
+
+    <div class="ss-slide" style="background-image:url('https://a0.muscache.com/im/pictures/cc9e302c-da2c-4ceb-833d-2bc492b20983.jpg')">
+      <div class="ss-overlay"></div>
+      <div class="ss-caption">
+        <div class="ss-caption-label" data-i18n="bed.2.tag_slide">Bedroom Two</div>
+        <div class="ss-caption-title"><em data-i18n="bed.2.name">Bedroom Two</em></div>
+      </div>
+    </div>
+
+    <div class="ss-slide" style="background-image:url('https://a0.muscache.com/im/pictures/3a39fa56-3b78-40d5-9759-9d724f2dcc9a.jpg')">
+      <div class="ss-overlay"></div>
+      <div class="ss-caption">
+        <div class="ss-caption-label" data-i18n="bed.3.tag_slide">Bedroom Three</div>
+        <div class="ss-caption-title"><em data-i18n="bed.3.name">Bedroom Three</em></div>
+      </div>
+    </div>
+
+    <div class="ss-slide" style="background-image:url('kitchen.jpg')">
+      <div class="ss-overlay"></div>
+      <div class="ss-caption">
+        <div class="ss-caption-label" data-i18n="kitchen.label_slide">The Kitchen</div>
+        <div class="ss-caption-title">The <em data-i18n="kitchen.em_word">Kitchen</em></div>
+      </div>
+    </div>
+
+    <div class="ss-slide" style="background-image:url('sala3.jpg')">
+      <div class="ss-overlay"></div>
+      <div class="ss-caption">
+        <div class="ss-caption-label" data-i18n="living.label_slide">The Living Room</div>
+        <div class="ss-caption-title">The <em data-i18n="living.em_word">Living Room</em></div>
+      </div>
+    </div>
+
+    <div class="ss-slide" style="background-image:url('night.jpg')">
+      <div class="ss-overlay"></div>
+      <div class="ss-caption">
+        <div class="ss-caption-label" data-i18n="ss.night.label">By Night</div>
+        <div class="ss-caption-title"><em data-i18n="ss.night.title">Casa Bö after dark</em></div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Controls -->
+  <button class="ss-btn ss-prev" onclick="ssMove(-1)" aria-label="Previous">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="15,18 9,12 15,6"/></svg>
+  </button>
+  <button class="ss-btn ss-next" onclick="ssMove(1)" aria-label="Next">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="9,6 15,12 9,18"/></svg>
+  </button>
+
+  <!-- Dots -->
+  <div class="ss-dots" id="ssDots"></div>
+
+  <!-- The Space link -->
+  <a href="the-space.html" class="ss-explore-btn" data-i18n="ss.explore">Explore The Space →</a>
+</section>
+
+<!-- STAY CARD + PHOTO -->
+<section id="stay-card" style="position:relative;height:100vh;height:100svh;min-height:560px;overflow:hidden;">
+  <!-- Background photo -->
+  <img src="night.jpg" alt="Casa Bö" class="stay-bg">
+  <div style="position:absolute;inset:0;background:rgba(18,14,9,.35);"></div>
+  <!-- Card centred over photo -->
+  <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:40px 48px;">
+    <div style="background:var(--bark);border-radius:4px;padding:52px 56px;max-width:780px;width:100%;" class="reveal">
+      <div style="font-family:var(--serif);font-size:1.9rem;font-weight:300;font-style:italic;color:var(--ink);margin-bottom:20px;" data-i18n="svc.aside.title">A stay without compromise</div>
+      <p style="font-size:.95rem;line-height:1.82;color:var(--ink-m);font-weight:300;margin-bottom:14px;" data-i18n="svc.aside.p1">Casa Bö is also available as a self-contained apartment for up to four guests, offering the same Balinese luxury at a more intimate scale.</p>
+      <p style="font-size:.95rem;line-height:1.82;color:var(--ink-m);font-weight:300;" data-i18n="svc.aside.p2">All special requests welcomed. Our team handles everything so you can simply arrive and exhale.</p>
+      <div style="margin-top:28px;padding-top:24px;border-top:1px solid var(--sand-d);display:flex;gap:0;">
+        <div style="flex:1;border-right:1px solid var(--sand-d);padding-right:24px;margin-right:24px;">
+          <div style="font-size:.6rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--teal-d);margin-bottom:6px;" data-i18n="ci.in">Check-in</div>
+          <div style="font-size:1.05rem;color:var(--ink);font-weight:300;" data-i18n="ci.in.val">From 4:00 pm</div>
+        </div>
+        <div style="flex:1;">
+          <div style="font-size:.6rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--teal-d);margin-bottom:6px;" data-i18n="ci.out">Check-out</div>
+          <div style="font-size:1.05rem;color:var(--ink);font-weight:300;" data-i18n="ci.out.val">Before 10:00 am</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OCCASIONS -->
+<section id="occasions">
+  <div class="occ-inner">
+    <div class="section-head reveal">
+      <h2 class="section-h2"><span data-i18n="occ.title">Celebrate every</span> <em data-i18n="occ.em">moment</em></h2>
+    </div>
+    <div class="occ-grid">
+      <div class="occ-card reveal">
+        <div class="occ-photo c1"></div><div class="occ-overlay"></div>
+        <div class="occ-content"><div class="occ-tag" data-i18n="occ.1.tag">Ceremony &amp; Reception</div><div class="occ-name" data-i18n="occ.1.name">Intimate Weddings</div><div class="occ-line"></div></div>
+      </div>
+      <div class="occ-card reveal rd1">
+        <div class="occ-photo c2"></div><div class="occ-overlay"></div>
+        <div class="occ-content"><div class="occ-tag" data-i18n="occ.2.tag">Romance &amp; Escape</div><div class="occ-name" data-i18n="occ.2.name">Honeymoon Retreats</div><div class="occ-line"></div></div>
+      </div>
+      <div class="occ-card reveal rd2">
+        <div class="occ-photo c3"></div><div class="occ-overlay"></div>
+        <div class="occ-content"><div class="occ-tag" data-i18n="occ.3.tag">Multi-Generational</div><div class="occ-name" data-i18n="occ.3.name">Family Celebrations</div><div class="occ-line"></div></div>
+      </div>
+      <div class="occ-card reveal rd3">
+        <div class="occ-photo c4"></div><div class="occ-overlay"></div>
+        <div class="occ-content"><div class="occ-tag" data-i18n="occ.4.tag">Groups &amp; Getaways</div><div class="occ-name" data-i18n="occ.4.name">Friends' Escapes</div><div class="occ-line"></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section id="reviews">
+  <div class="rev-inner">
+    <div class="section-head reveal">
+      <h2 class="section-h2"><span data-i18n="rev.title">Written in</span> <em data-i18n="rev.em">wonder</em></h2>
+    </div>
+    <div class="rev-score-row reveal">
+      <div class="rev-big-score">5.0</div>
+      <div class="rev-score-info">
+        <div class="rev-stars-row"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <div class="rev-score-label"><strong>93 <span data-i18n="rev.reviews">reviews</span></strong> · <span data-i18n="rev.pct">100% five-star</span></div>
+        <div class="rev-score-label" data-i18n="rev.cats">Cleanliness · Accuracy · Check-in · Communication · Location · Value</div>
+      </div>
+      <div class="gf-badge">
+        <div class="gf-icon">🏆</div>
+        <div class="gf-label" data-i18n="rev.gf">Guest Favorite</div>
+        <div class="gf-sub" data-i18n="rev.gfsub">Top 1% of eligible listings</div>
+      </div>
+    </div>
+    <div class="rev-grid">
+      <div class="rev-card reveal">
+        <div class="rev-card-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <div class="rev-text" data-i18n="rev.1">"Gorgeous, tropical and welcoming. The neighborhood is filled with wonderful restaurants you can walk or take a golf cart to. Casa Bö is a must stay."</div>
+        <div class="rev-who">Mike M. · March 2025</div>
+        <div class="rev-ghost">5</div>
+      </div>
+      <div class="rev-card reveal rd1">
+        <div class="rev-card-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <div class="rev-text" data-i18n="rev.2">"Aesthetic 10/10, pure bliss. Beautiful design, peaceful, extremely clean. Everything we needed and more. They thought of everything."</div>
+        <div class="rev-who">Deanna M. · January 2025</div>
+        <div class="rev-ghost">5</div>
+      </div>
+      <div class="rev-card reveal rd2">
+        <div class="rev-card-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <div class="rev-text" data-i18n="rev.3">"The décor is stunning, unique in the most awesome way. The host answered every question. Like having our own personal concierge service."</div>
+        <div class="rev-who" data-i18n="rev.3.who">Verified Guest</div>
+        <div class="rev-ghost">5</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="cta">
+  <div class="cta-logo-watermark"><img src="casa_bo_logo.png" alt=""></div>
+  <div class="cta-in">
+    <div class="cta-eyebrow reveal" data-i18n="cta.eyebrow">Reserve Your Stay</div>
+    <p class="cta-sub reveal rd2" data-i18n="cta.sub">Steps from the Pacific. Rooted in luxury. Surrounded by nature. Casa Bö is ready for you.</p>
+    <div class="cta-btns reveal rd3">
+      <a href="book.html" class="btn-pill-light solid" data-i18n="cta.direct">Book Directly</a>
+      <a href="https://www.airbnb.co.cr/rooms/46355122" target="_blank" class="btn-pill-light ghost" data-i18n="cta.book">Book on Airbnb</a>
+      <a href="https://www.vrbo.com/2117050" target="_blank" class="btn-pill-light ghost" data-i18n="cta.vrbo">View on Vrbo</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="foot-logo">
+    <img src="casa_bo_logo.png" alt="Casa Bö logo">
+    <span class="foot-logo-text">Casa <span>Bö</span></span>
+  </div>
+  <div class="foot-mid">Playa Langosta · Tamarindo · Guanacaste · Costa Rica</div>
+  <div class="foot-r">© 2025 Casa Bö</div>
+</footer>
+
+<script>
+/* ── TRANSLATIONS ── */
+const T = {
+  en: {
+    'bed.2.tag_slide':'Bedroom Two','bed.3.tag_slide':'Bedroom Three',
+    'kitchen.label_slide':'The Kitchen','living.label_slide':'The Living Room',
+    'ss.night.label':'By Night','ss.night.title':'Casa Bö after dark',
+    'ss.explore':'Explore The Space →',
+    'nav.villa':'Home','nav.gallery':'The Space','nav.occasions':'Occasions',
+    'nav.services':'Services','nav.location':'Location','nav.book':'Book Now','nav.blog':'Blog',
+    'hero.eyebrow':'Playa Langosta · Guanacaste · Costa Rica',
+    'hero.welcome':'Welcome to','hero.tagline':'A luxurious beach retreat, steps from the sea.',
+    'hero.pill':'Your Private<br>Paradise',
+    'ticker.t1':'Open-Air Living','ticker.t2':'Private Pool',
+    'ticker.t3':'4 min to Tamarindo','ticker.t4':'5.0 Stars Reviews',
+    'intro.heading':'A sanctuary of <em>indoor–outdoor</em> living',
+    'chips.bed':'Bedrooms','chips.bath':'Bathrooms','chips.guests':'Guests',
+    'chips.poolval':'Private','chips.pool':'Pool',
+    'intro.p1':'Welcome to Casa Bö, a luxurious vacation rental just steps from Playa Langosta and four minutes from Tamarindo\'s celebrated surf town, home to vibrant bars, refined restaurants, boutiques, spas, and legendary nightlife.',
+    'intro.p2':'Casa Bö\'s open-living concept invites you to reconnect with nature while enjoying every comfort of a luxury home. The merged indoor/outdoor space features a spectacular open-plan kitchen, custom-made Balinese furniture, and a living room that mirrors the stillness of a turquoise swimming pool set within a lush tropical garden.',
+    'intro.quote':'"Aesthetic 10/10, pure bliss. Beautiful design, peaceful, extremely clean. They thought of everything."',
+    'intro.cite':'Deanna M., Verified Guest · 5 Stars',
+    'cta.book':'Book on Airbnb','cta.see':'See the Space',
+    'gallery.pool':'Private Pool','gallery.living':'Living Area','gallery.interior':'Interior',
+    'gallery.outdoor':'Outdoor Space','gallery.kitchen':'Kitchen',
+    'features.title':'Space',
+    'feat.1.name':'Open-Living Concept','feat.1.desc':'A seamlessly merged indoor and outdoor space that dissolves the boundary between architecture and nature.',
+    'feat.2.name':'Turquoise Private Pool','feat.2.desc':'A spectacular pool set within a lush tropical garden, the living room mirrors its still, luminous surface.',
+    'feat.3.name':'Custom Balinese Furniture','feat.3.desc':'Every piece handcrafted. Artisanal Balinese furniture brings warmth and soul to every corner.',
+    'feat.4.name':'Open-Plan Kitchen','feat.4.desc':'Spectacular and fully-equipped, flowing directly into the living and outdoor areas, ideal for group celebrations.',
+    'feat.5.name':'Daily Housekeeping','feat.5.desc':'4 hours of professional housekeeping included daily (except weekends and statutory holidays).',
+    'feat.6.name':'Steps to the Beach','feat.6.desc':'Playa Langosta at your doorstep. Tamarindo\'s surf, dining, and nightlife just four minutes away.',
+    'am.label':'Amenities','am.title':'Everything considered','am.ac':'Air Conditioning','am.pool':'Private Pool',
+    'am.kitchen':'Full Kitchen','am.terrace':'Terrace & Balcony','am.parking':'Free Parking',
+    'am.child':'Child Friendly','am.bbq':'BBQ Outdoor','am.beach':'Beach Access',
+    'am.garden':'Tropical Garden','am.laundry':'Laundry','am.workspace':'Dedicated Workspace',
+    'am.guests':'Up to 8 Guests','am.linens':'Premium Linens','am.concierge':'Concierge Services',
+    'bed.label':'Where You\'ll','bed.em_word':'Sleep','bed.sublabel':'Three bedrooms · Four bathrooms','bed.sublabel':'Three bedrooms · Four bathrooms','bed.title':'Three rooms,','bed.em':'one dream',
+    'bed.1.name':'Master Suite','bed.1.spec':'1 King bed · En-suite bathroom',
+    'bed.2.name':'Bedroom Two','bed.2.spec':'1 Queen bed · En-suite bathroom',
+    'bed.3.name':'Bedroom Three','bed.3.spec':'2 Queen beds · 2 Single beds',
+    'kitchen.label':'The Kitchen','kitchen.em_word':'Kitchen','kitchen.em_word':'Kitchen','kitchen.title':'Open, bright','kitchen.em':'fully equipped',
+    'kitchen.1.name':'Open-Plan Kitchen','kitchen.1.spec':'Fully equipped · Flows into living area',
+    'kitchen.2.name':'Dining Area','kitchen.2.spec':'Seats 8 · Indoor & outdoor dining',
+    'kitchen.3.name':'Premium Appliances','kitchen.3.spec':'Espresso machine · Full cookware',
+    'living.label':'The Living Room','living.em_word':'Living Room','living.em_word':'Living Room','living.title':'Where nature','living.em':'where nature comes inside',
+    'living.1.name':'Open Living Space','living.1.spec':'Balinese furniture · Indoor-outdoor flow',
+    'living.2.name':'Lounge & Terrace','living.2.spec':'Smart TV · Garden views · Outdoor seating',
+    'living.3.name':'Artisan Details','living.3.spec':'Hand-carved accents · Tropical textiles',
+    'pool.label':'Pool & Outdoor','pool.sublabel':'Pool & Outdoor','pool.title':'Your private','pool.em':'oasis',
+    'pool.1.name':'Turquoise Pool','pool.1.spec':'Private · Surrounded by tropical garden',
+    'pool.2.name':'Fire Pit','pool.2.spec':'Poolside · Perfect for evening gatherings',
+    'pool.3.name':'Outdoor BBQ','pool.3.spec':'Full grill setup · Al fresco dining · Garden lounge',
+    'occ.label':'Perfect For','occ.title':'Celebrate every','occ.em':'moment',
+    'occ.1.tag':'Ceremony & Reception','occ.1.name':'Intimate Weddings',
+    'occ.2.tag':'Romance & Escape','occ.2.name':'Honeymoon Retreats',
+    'occ.3.tag':'Multi-Generational','occ.3.name':'Family Celebrations',
+    'occ.4.tag':'Groups & Getaways','occ.4.name':'Friends\' Escapes',
+    'svc.label':'Staff & Services','svc.title':'Staff and Services',
+    'svc.1.name':'Housekeeping','svc.1.desc':'Included, 4 hours daily (except weekends & statutory holidays)',
+    'svc.2.name':'Private Chef','svc.2.desc':'Available on request, curated menus prepared in your open-plan kitchen',
+    'svc.3.name':'Grocery Pre-Stocking','svc.3.desc':'Arrive to a fully stocked kitchen with groceries, wine, and essentials ready',
+    'svc.4.name':'Airport Transfers','svc.4.desc':'Private transfers from LIR · Liberia (~1.5 hrs) or SJO · San José (~4.5 hrs)',
+    'svc.5.name':'Concierge','svc.5.desc':'Private chef, activities such as scuba diving, surfing, canopy, wildlife and boat tours. Tamarindo is your gateway to Guanacaste',
+    'svc.aside.title':'A stay without compromise',
+    'svc.aside.p1':'Casa Bö is also available as a self-contained apartment for up to four guests, offering the same Balinese luxury at a more intimate scale.',
+    'svc.aside.p2':'All special requests welcomed. Our team handles everything so you can simply arrive and exhale.',
+    'ci.in':'Check-in','ci.in.val':'From 4:00 pm','ci.out':'Check-out','ci.out.val':'Before 10:00 am','ci.age':'Min. age',
+    'rev.label':'Guest Voices','rev.title':'Written in','rev.em':'wonder',
+    'rev.reviews':'reviews','rev.pct':'100% five-star',
+    'rev.cats':'Cleanliness · Accuracy · Check-in · Communication · Location · Value',
+    'rev.gf':'Guest Favorite','rev.gfsub':'Top 1% of eligible listings',
+    'rev.1':'"Gorgeous, tropical and welcoming. The neighborhood is filled with wonderful restaurants you can walk or take a golf cart to. Casa Bö is a must stay."',
+    'rev.2':'"Aesthetic 10/10, pure bliss. Beautiful design, peaceful, extremely clean. Everything we needed and more. They thought of everything."',
+    'rev.3':'"The décor is stunning, unique in the most awesome way. The host answered every question. Like having our own personal concierge service."',
+    'rev.3.who':'Verified Guest',
+    'loc.label':'Location','loc.title':'In the heart of',
+    'loc.p':'Playa Langosta offers the tranquility of a private beach escape with all the energy of Tamarindo just minutes away. Surf. Explore. Return to stillness.',
+    'loc.d1':'Playa Langosta Beach','loc.d1v':'Steps away',
+    'loc.d2':'Tamarindo Beach & Town','loc.d2v':'4 min drive',
+    'loc.d3v':'~1.5 hour','loc.d4v':'~4.5 hours',
+    'loc.d5':'Restaurants & Bars','loc.d5v':'Walking distance',
+    'cta.eyebrow':'Reserve Your Stay','cta.h2a':'Your','cta.h2b':'escape','cta.h2c':'awaits',
+    'cta.sub':'Steps from the Pacific. Rooted in luxury. Surrounded by nature. Casa Bö is ready for you.',
+    'cta.vrbo':'View on Vrbo',
+    'pool.blurb':'A spectacular pool set within a lush tropical garden, the living room mirrors its still, luminous surface. Casa Bö\'s open-living concept seamlessly dissolves the boundary between architecture and nature.',
+    'bed.blurb':'Each bedroom is a private retreat with premium linens, Balinese-crafted furnishings, and thoughtful details. Daily housekeeping ensures everything feels fresh and cared for throughout your stay.',
+    'kitchen.blurb':'Spectacular and fully-equipped, the open-plan kitchen flows directly into the living and outdoor areas, ideal for group celebrations, al fresco breakfasts, and everything in between.',
+    'living.blurb':'Every piece is handcrafted, artisanal Balinese furniture brings warmth and soul to every corner. The merged indoor/outdoor space invites you to live fully, beautifully, and without boundaries.',
+  },
+  es: {
+    'bed.2.tag_slide':'Habitación Dos','bed.3.tag_slide':'Habitación Tres',
+    'kitchen.label_slide':'La Cocina','living.label_slide':'La Sala de Estar',
+    'ss.night.label':'De Noche','ss.night.title':'Casa Bö de noche',
+    'ss.explore':'Explorar El Espacio →',
+    'nav.villa':'Inicio','nav.gallery':'El Espacio','nav.occasions':'Ocasiones',
+    'nav.services':'Servicios','nav.location':'Ubicación','nav.book':'Reservar','nav.blog':'Blog',
+    'hero.eyebrow':'Playa Langosta · Guanacaste · Costa Rica',
+    'hero.welcome':'Bienvenido a','hero.tagline':'Un retiro de lujo junto al mar.',
+    'hero.pill':'Tu Paraíso<br>Privado',
+    'ticker.t1':'Vida al Aire Libre','ticker.t2':'Piscina Privada',
+    'ticker.t3':'4 min a Tamarindo','ticker.t4':'5.0 Estrellas',
+    'intro.heading':'Un santuario de vida <em>interior–exterior</em>',
+    'chips.bed':'Habitaciones','chips.bath':'Baños','chips.guests':'Huéspedes',
+    'chips.poolval':'Piscina','chips.pool':'Privada',
+    'intro.p1':'Bienvenido a Casa Bö, un lujoso alquiler vacacional a pasos de Playa Langosta y a cuatro minutos del famoso pueblo surfero de Tamarindo, con bares vibrantes, restaurantes refinados, boutiques, spas y una legendaria vida nocturna.',
+    'intro.p2':'El concepto de vida abierta de Casa Bö es una invitación a reconectarse con la naturaleza mientras disfrutas de todas las comodidades de un hogar de lujo. El espacio fusionado interior/exterior cuenta con una espectacular cocina abierta, muebles balineses personalizados y una sala de estar que refleja la quietud de una piscina turquesa en un exuberante jardín tropical.',
+    'intro.quote':'"Estética 10/10, pura felicidad. Diseño hermoso, tranquilo, extremadamente limpio. Pensaron en todo."',
+    'intro.cite':'Deanna M., Huésped Verificada · 5 Estrellas',
+    'cta.book':'Reservar en Airbnb','cta.see':'Ver el Espacio',
+    'gallery.pool':'Piscina Privada','gallery.living':'Sala de Estar','gallery.interior':'Interior',
+    'gallery.outdoor':'Espacio Exterior','gallery.kitchen':'Cocina',
+    'features.title':'Espacio',
+    'feat.1.name':'Concepto de Vida Abierta','feat.1.desc':'Un espacio interior y exterior perfectamente fusionado que disuelve la frontera entre la arquitectura y la naturaleza.',
+    'feat.2.name':'Piscina Privada Turquesa','feat.2.desc':'Una piscina espectacular en un exuberante jardín tropical, cuya superficie luminosa se refleja en la sala de estar.',
+    'feat.3.name':'Muebles Balineses Personalizados','feat.3.desc':'Cada pieza es artesanal. Los muebles balineses aportan calidez y alma a cada rincón.',
+    'feat.4.name':'Cocina Abierta','feat.4.desc':'Espectacular y totalmente equipada, integrada con las áreas de estar y exterior, ideal para celebraciones en grupo.',
+    'feat.5.name':'Limpieza Diaria','feat.5.desc':'4 horas de limpieza profesional incluidas diariamente (excepto fines de semana y días festivos).',
+    'feat.6.name':'A Pasos de la Playa','feat.6.desc':'Playa Langosta a tu puerta. El surf, la gastronomía y la vida nocturna de Tamarindo a solo cuatro minutos.',
+    'am.label':'Servicios','am.title':'Todo incluido','am.ac':'Aire Acondicionado','am.pool':'Piscina Privada',
+    'am.kitchen':'Cocina Completa','am.terrace':'Terraza y Balcón','am.parking':'Estacionamiento Gratis',
+    'am.child':'Apto para Niños','am.bbq':'BBQ Exterior','am.beach':'Acceso a la Playa',
+    'am.garden':'Jardín Tropical','am.laundry':'Lavandería','am.workspace':'Espacio de Trabajo',
+    'am.guests':'Hasta 8 Huéspedes','am.linens':'Ropa de Cama Premium','am.concierge':'Servicio de Conserjería',
+    'bed.label':'Donde','bed.em_word':'Dormirás','bed.sublabel':'Tres habitaciones · Cuatro baños','bed.sublabel':'Tres habitaciones · Cuatro baños','bed.title':'Tres habitaciones,','bed.em':'un sueño',
+    'bed.1.name':'Suite Principal','bed.1.spec':'1 cama King · Baño en suite',
+    'bed.2.name':'Habitación Dos','bed.2.spec':'1 cama Queen · Baño en suite',
+    'bed.3.name':'Habitación Tres','bed.3.spec':'2 camas Queen · 2 camas individuales',
+    'kitchen.label':'La','kitchen.em_word':'Cocina','kitchen.title':'Abierta, luminosa','kitchen.em':'totalmente equipada',
+    'kitchen.1.name':'Cocina Abierta','kitchen.1.spec':'Completamente equipada · Integrada con la sala',
+    'kitchen.2.name':'Área de Comedor','kitchen.2.spec':'Para 8 personas · Comedor interior y exterior',
+    'kitchen.3.name':'Electrodomésticos Premium','kitchen.3.spec':'Cafetera espresso · Utensilios completos',
+    'living.label':'La','living.em_word':'Sala de Estar','living.title':'Donde la naturaleza','living.em':'donde la naturaleza entra',
+    'living.1.name':'Espacio de Vida Abierto','living.1.spec':'Muebles balineses · Flujo interior-exterior',
+    'living.2.name':'Salón y Terraza','living.2.spec':'Smart TV · Vistas al jardín · Zona de descanso exterior',
+    'living.3.name':'Detalles Artesanales','living.3.spec':'Tallas a mano · Textiles tropicales',
+    'pool.label':'Piscina y Exterior','pool.sublabel':'Piscina y Exterior','pool.title':'Tu oasis','pool.em':'privado',
+    'pool.1.name':'Piscina Turquesa','pool.1.spec':'Privada · Rodeada de jardín tropical',
+    'pool.2.name':'Fogón Exterior','pool.2.spec':'Junto a la piscina · Perfecto para reuniones nocturnas',
+    'pool.3.name':'Parrilla Exterior','pool.3.spec':'Parrilla completa · Comedor al aire libre · Jardín lounge',
+    'occ.label':'Ideal Para','occ.title':'Celebra cada','occ.em':'momento',
+    'occ.1.tag':'Ceremonia y Recepción','occ.1.name':'Bodas Íntimas',
+    'occ.2.tag':'Romance y Escape','occ.2.name':'Luna de Miel',
+    'occ.3.tag':'Multigeneracional','occ.3.name':'Celebraciones Familiares',
+    'occ.4.tag':'Grupos y Escapadas','occ.4.name':'Escapadas con Amigos',
+    'svc.label':'Personal y Servicios','svc.title':'Personal y Servicios',
+    'svc.1.name':'Limpieza','svc.1.desc':'Incluida, 4 horas diarias (excepto fines de semana y festivos)',
+    'svc.2.name':'Chef Privado','svc.2.desc':'Disponible bajo pedido, menús elaborados en tu cocina abierta',
+    'svc.3.name':'Despensa Pre-abastecida','svc.3.desc':'Llega a una cocina completamente abastecida con víveres, vino y todo lo necesario',
+    'svc.4.name':'Traslados al Aeropuerto','svc.4.desc':'Traslados privados desde LIR · Liberia (~1.5 hrs) o SJO · San José (~4.5 hrs)',
+    'svc.5.name':'Conserjería','svc.5.desc':'Chef privado, actividades como buceo, surf, canopy, fauna y tours en bote. Tamarindo es tu puerta a Guanacaste',
+    'svc.aside.title':'Una estadía sin compromisos',
+    'svc.aside.p1':'Casa Bö también está disponible como apartamento independiente para hasta cuatro huéspedes, ofreciendo el mismo lujo balinés a una escala más íntima.',
+    'svc.aside.p2':'Todas las solicitudes especiales son bienvenidas. Nuestro equipo se encarga de todo para que solo tengas que llegar y relajarte.',
+    'ci.in':'Llegada','ci.in.val':'Desde las 4:00 pm','ci.out':'Salida','ci.out.val':'Antes de las 10:00 am','ci.age':'Edad mín.',
+    'rev.label':'Voces de Huéspedes','rev.title':'Escrito con','rev.em':'asombro',
+    'rev.reviews':'reseñas','rev.pct':'100% cinco estrellas',
+    'rev.cats':'Limpieza · Exactitud · Check-in · Comunicación · Ubicación · Valor',
+    'rev.gf':'Favorito de Huéspedes','rev.gfsub':'Top 1% de los alojamientos',
+    'rev.1':'"Hermoso, tropical y acogedor. El vecindario está lleno de restaurantes a los que puedes ir caminando o en carrito de golf. Casa Bö es imprescindible."',
+    'rev.2':'"Estética 10/10, pura felicidad. Diseño hermoso, tranquilo, extremadamente limpio. Todo lo que necesitábamos y más. Pensaron en todo."',
+    'rev.3':'"La decoración es impresionante, única de la mejor manera. El anfitrión respondió cada pregunta. Como tener nuestro propio servicio de conserjería."',
+    'rev.3.who':'Huésped Verificado',
+    'loc.label':'Ubicación','loc.title':'En el corazón de',
+    'loc.p':'Playa Langosta ofrece la tranquilidad de un escape privado en la playa con toda la energía de Tamarindo a pocos minutos. Surfea. Explora. Regresa a la calma.',
+    'loc.d1':'Playa Langosta','loc.d1v':'A pasos',
+    'loc.d2':'Playa y Pueblo Tamarindo','loc.d2v':'4 min en auto',
+    'loc.d3v':'~1.5 hora','loc.d4v':'~4.5 horas',
+    'loc.d5':'Restaurantes y Bares','loc.d5v':'A pie',
+    'cta.eyebrow':'Reserva Tu Estadía','cta.h2a':'Tu','cta.h2b':'paraíso','cta.h2c':'te espera',
+    'cta.sub':'A pasos del Pacífico. Con raíces de lujo. Rodeado de naturaleza. Casa Bö te espera.',
+    'cta.vrbo':'Ver en Vrbo',
+    'pool.blurb':'Una piscina espectacular en un jardín tropical exuberante, cuya superficie luminosa se refleja en la sala de estar. El concepto de vida abierta de Casa Bö disuelve la frontera entre arquitectura y naturaleza.',
+    'bed.blurb':'Cada habitación es un refugio privado con ropa de cama premium, muebles balineses artesanales y detalles cuidados. El servicio de limpieza diario garantiza una estancia siempre impecable.',
+    'kitchen.blurb':'Espectacular y completamente equipada, la cocina abierta se integra con las áreas de estar y exterior, ideal para celebraciones en grupo, desayunos al aire libre y todo lo que imagines.',
+    'living.blurb':'Cada pieza es artesanal, los muebles balineses aportan calidez y alma a cada rincón. El espacio fusionado interior/exterior te invita a vivir plena y bellamente, sin límites.',
+  },
+  fr: {
+    'nav.villa':'Inicio','nav.gallery':'L\'Espace','nav.occasions':'Occasions',
+    'nav.services':'Services','nav.location':'Emplacement','nav.book':'Réserver','nav.blog':'Blog',
+    'hero.eyebrow':'Playa Langosta · Guanacaste · Costa Rica',
+    'hero.welcome':'Bienvenue à','hero.tagline':'Un refuge de luxe, à deux pas de la mer.',
+    'hero.pill':'Votre Paradis<br>Privé',
+    'ticker.t1':'Vie en Plein Air','ticker.t2':'Piscine Privée',
+    'ticker.t3':'4 min de Tamarindo','ticker.t4':'5.0 Étoiles',
+    'intro.heading':'Un sanctuaire de vie <em>intérieure–extérieure</em>',
+    'chips.bed':'Chambres','chips.bath':'Salles de bain','chips.guests':'Hôtes',
+    'chips.poolval':'Piscine','chips.pool':'Privée',
+    'intro.p1':'Bienvenue à Casa Bö, une location de vacances de luxe à quelques pas de Playa Langosta et à quatre minutes du célèbre village de surf de Tamarindo, avec ses bars animés, ses restaurants raffinés, ses boutiques, ses spas et sa vie nocturne légendaire.',
+    'intro.p2':'Le concept de vie ouverte de Casa Bö est une invitation à se reconnecter avec la nature tout en profitant de tout le confort d\'une maison de luxe. L\'espace intérieur/extérieur fusionné comprend une cuisine ouverte spectaculaire, des meubles balinais personnalisés et un salon qui reflète la sérénité d\'une piscine turquoise dans un luxuriant jardin tropical.',
+    'intro.quote':'"Esthétique 10/10, pur bonheur. Beau design, paisible, extrêmement propre. Ils ont pensé à tout."',
+    'intro.cite':'Deanna M., Hôte Vérifiée · 5 Étoiles',
+    'cta.book':'Réserver sur Airbnb','cta.see':'Voir l\'Espace',
+    'gallery.pool':'Piscine Privée','gallery.living':'Salon','gallery.interior':'Intérieur',
+    'gallery.outdoor':'Espace Extérieur','gallery.kitchen':'Cuisine',
+    'features.title':'Espace',
+    'feat.1.name':'Concept de Vie Ouverte','feat.1.desc':'Un espace intérieur et extérieur parfaitement fusionné qui efface la frontière entre l\'architecture et la nature.',
+    'feat.2.name':'Piscine Privée Turquoise','feat.2.desc':'Une piscine spectaculaire dans un jardin tropical luxuriant, dont la surface lumineuse se reflète dans le salon.',
+    'feat.3.name':'Mobilier Balinais sur Mesure','feat.3.desc':'Chaque pièce est artisanale. Le mobilier balinais apporte chaleur et âme à chaque recoin.',
+    'feat.4.name':'Cuisine Ouverte','feat.4.desc':'Spectaculaire et entièrement équipée, en continuité avec les espaces de vie et extérieurs, idéale pour les célébrations en groupe.',
+    'feat.5.name':'Ménage Quotidien','feat.5.desc':'4 heures de ménage professionnel incluses chaque jour (sauf week-ends et jours fériés).',
+    'feat.6.name':'À Deux Pas de la Plage','feat.6.desc':'Playa Langosta à votre porte. Le surf, la gastronomie et la vie nocturne de Tamarindo à seulement quatre minutes.',
+    'am.label':'Équipements','am.title':'Tout compris','am.ac':'Climatisation','am.pool':'Piscine Privée',
+    'am.kitchen':'Cuisine Complète','am.terrace':'Terrasse et Balcon','am.parking':'Parking Gratuit',
+    'am.child':'Adapté aux Enfants','am.bbq':'Barbecue Extérieur','am.beach':'Accès à la Plage',
+    'am.garden':'Jardin Tropical','am.laundry':'Buanderie','am.workspace':'Espace de Travail',
+    'am.guests':'Jusqu\'à 8 Hôtes','am.linens':'Linge de Maison Premium','am.concierge':'Services de Conciergerie',
+    'bed.label':'Où Vous','bed.em_word':'Dormirez','bed.sublabel':'Trois chambres · Quatre salles de bain','bed.sublabel':'Trois chambres · Quatre salles de bain','bed.title':'Trois chambres,','bed.em':'un rêve',
+    'bed.1.name':'Suite Principale','bed.1.spec':'1 lit King · Salle de bain privative',
+    'bed.2.name':'Chambre Deux','bed.2.spec':'1 lit Queen · Salle de bain privative',
+    'bed.3.name':'Chambre Trois','bed.3.spec':'2 lits Queen · 2 lits simples',
+    'kitchen.label':'La','kitchen.em_word':'Cuisine','kitchen.title':'Ouverte, lumineuse','kitchen.em':'entièrement équipée',
+    'kitchen.1.name':'Cuisine Ouverte','kitchen.1.spec':'Entièrement équipée · Intégrée au salon',
+    'kitchen.2.name':'Salle à Manger','kitchen.2.spec':'8 couverts · Repas intérieur et extérieur',
+    'kitchen.3.name':'Électroménager Premium','kitchen.3.spec':'Machine à expresso · Batterie de cuisine',
+    'living.label':'Le','living.em_word':'Salon','living.title':'Là où la nature','living.em':'où la nature entre',
+    'living.1.name':'Espace de Vie Ouvert','living.1.spec':'Mobilier balinais · Fluidité intérieur-extérieur',
+    'living.2.name':'Salon et Terrasse','living.2.spec':'Smart TV · Vue sur le jardin · Assises extérieures',
+    'living.3.name':'Détails Artisanaux','living.3.spec':'Sculptures à la main · Textiles tropicaux',
+    'pool.label':'Piscine et Extérieur','pool.sublabel':'Piscine et Extérieur','pool.title':'Votre oasis','pool.em':'privée',
+    'pool.1.name':'Piscine Turquoise','pool.1.spec':'Privée · Chauffée · Entourée d\'un jardin tropical',
+    'pool.2.name':'Feu de Camp','pool.2.spec':'Au bord de la piscine · Idéal pour les soirées',
+    'pool.3.name':'Barbecue Extérieur','pool.3.spec':'Grill complet · Repas en plein air · Lounge jardin',
+    'occ.label':'Idéal Pour','occ.title':'Célébrez chaque','occ.em':'instant',
+    'occ.1.tag':'Cérémonie et Réception','occ.1.name':'Mariages Intimes',
+    'occ.2.tag':'Romance et Évasion','occ.2.name':'Lune de Miel',
+    'occ.3.tag':'Multi-Générationnel','occ.3.name':'Fêtes en Famille',
+    'occ.4.tag':'Groupes et Escapades','occ.4.name':'Escapades entre Amis',
+    'svc.label':'Personnel et Services','svc.title':'Personnel et Services',
+    'svc.1.name':'Ménage','svc.1.desc':'Inclus, 4 heures par jour (sauf week-ends et jours fériés)',
+    'svc.2.name':'Chef Privé','svc.2.desc':'Sur demande, menus élaborés dans votre cuisine ouverte',
+    'svc.3.name':'Ravitaillement','svc.3.desc':'Arrivez à une cuisine entièrement approvisionnée avec épicerie, vin et l\'essentiel',
+    'svc.4.name':'Transferts Aéroport','svc.4.desc':'Transferts privés depuis LIR · Liberia (~1,5 h) ou SJO · San José (~4,5 h)',
+    'svc.5.name':'Conciergerie','svc.5.desc':'Surf, canopée, faune et tours en bateau. Tamarindo est votre porte d\'entrée sur le Guanacaste',
+    'svc.aside.title':'Un séjour sans compromis',
+    'svc.aside.p1':'Casa Bö est également disponible en appartement indépendant pour jusqu\'à quatre hôtes, offrant le même luxe balinais à une échelle plus intime.',
+    'svc.aside.p2':'Toutes les demandes spéciales sont les bienvenues. Notre équipe s\'occupe de tout pour que vous n\'ayez qu\'à arriver et souffler.',
+    'ci.in':'Arrivée','ci.in.val':'À partir de 16h00','ci.out':'Départ','ci.out.val':'Avant 10h00','ci.age':'Âge min.',
+    'rev.label':'Avis des Hôtes','rev.title':'Écrit avec','rev.em':'émerveillement',
+    'rev.reviews':'avis','rev.pct':'100% cinq étoiles',
+    'rev.cats':'Propreté · Exactitude · Arrivée · Communication · Emplacement · Rapport qualité-prix',
+    'rev.gf':'Favori des Hôtes','rev.gfsub':'Top 1% des logements',
+    'rev.1':'"Magnifique, tropical et accueillant. Le quartier est rempli de merveilleux restaurants accessibles à pied ou en voiturette de golf. Casa Bö est un incontournable."',
+    'rev.2':'"Esthétique 10/10, pur bonheur. Beau design, paisible, extrêmement propre. Tout ce qu\'il nous fallait et plus. Ils ont pensé à tout."',
+    'rev.3':'"La décoration est époustouflante, unique de la plus belle façon. L\'hôte a répondu à chaque question. Comme avoir notre propre service de conciergerie."',
+    'rev.3.who':'Hôte Vérifié',
+    'loc.label':'Emplacement','loc.title':'Au cœur du',
+    'loc.p':'Playa Langosta offre la tranquillité d\'une escapade balnéaire privée avec toute l\'énergie de Tamarindo à quelques minutes. Surfez. Explorez. Retrouvez la sérénité.',
+    'loc.d1':'Plage de Playa Langosta','loc.d1v':'À quelques pas',
+    'loc.d2':'Plage et Village de Tamarindo','loc.d2v':'4 min en voiture',
+    'loc.d3v':'~1.5 heure','loc.d4v':'~4.5 heures',
+    'loc.d5':'Restaurants et Bars','loc.d5v':'À pied',
+    'cta.eyebrow':'Réservez Votre Séjour','cta.h2a':'Votre','cta.h2b':'évasion','cta.h2c':'vous attend',
+    'cta.sub':'À quelques pas du Pacifique. Ancré dans le luxe. Entouré de nature. Casa Bö est prêt à vous accueillir.',
+    'cta.vrbo':'Voir sur Vrbo',
+    'pool.blurb':'Une piscine spectaculaire dans un jardin tropical luxuriant, dont la surface lumineuse se reflète dans le salon. Le concept de vie ouverte de Casa Bö efface la frontière entre architecture et nature.',
+    'bed.blurb':'Chaque chambre est un refuge privé avec du linge de maison premium, un mobilier balinais artisanal et des détails soignés. Le ménage quotidien garantit un séjour toujours impeccable.',
+    'kitchen.blurb':'Spectaculaire et entièrement équipée, la cuisine ouverte s\'intègre aux espaces de vie et extérieurs, idéale pour les célébrations en groupe, les petits-déjeuners en plein air et tout le reste.',
+    'living.blurb':'Chaque pièce est artisanale, le mobilier balinais apporte chaleur et âme à chaque recoin. L\'espace intérieur/extérieur fusionné vous invite à vivre pleinement, magnifiquement, sans frontières.',
+  }
+};
+
+let currentLang = 'en';
+
+function setLang(lang) {
+  try{localStorage.setItem('cb-lang',lang);}catch(e){}
+  currentLang = lang;
+  document.documentElement.lang = lang;
+
+  // Update all data-i18n elements (HTML + SVG tspan)
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (T[lang][key] !== undefined) {
+      // SVG text elements use textContent, not innerHTML
+      if (el.namespaceURI === 'http://www.w3.org/2000/svg') {
+        el.textContent = T[lang][key].toUpperCase();
+      } else {
+        el.innerHTML = T[lang][key];
+      }
+    }
+  });
+
+  // Update lang buttons
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.textContent === lang.toUpperCase());
+  });
+}
+
+/* CURSOR */
+const cur=document.getElementById('cursor'),ring=document.getElementById('cursor-ring');
+let mx=-100,my=-100,rx=-100,ry=-100;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;});
+(function loop(){
+  cur.style.left=mx+'px';cur.style.top=my+'px';
+  rx+=(mx-rx)*.4;ry+=(my-ry)*.4;
+  ring.style.left=rx+'px';ring.style.top=ry+'px';
+  requestAnimationFrame(loop);
+})();
+
+/* SLIDESHOW JS */
+(function(){
+  const slides=document.querySelectorAll('.ss-slide');
+  const dotsContainer=document.getElementById('ssDots');
+  let cur=0,timer=null;
+
+  // Build dots
+  slides.forEach((_,i)=>{
+    const d=document.createElement('button');
+    d.className='ss-dot'+(i===0?' active':'');
+    d.setAttribute('aria-label','Slide '+(i+1));
+    d.onclick=()=>goTo(i);
+    dotsContainer.appendChild(d);
+  });
+
+  function goTo(n){
+    slides[cur].classList.remove('active');
+    slides[cur].classList.add('leaving');
+    setTimeout(()=>slides[cur-1>=0?cur:slides.length-1]&&slides.forEach(s=>s.classList.remove('leaving')),1000);
+    cur=(n+slides.length)%slides.length;
+    slides[cur].classList.add('active');
+    document.querySelectorAll('.ss-dot').forEach((d,i)=>d.classList.toggle('active',i===cur));
+    resetTimer();
+  }
+
+  function resetTimer(){
+    clearInterval(timer);
+    timer=setInterval(()=>goTo(cur+1),5000);
+  }
+
+  resetTimer();
+  window.ssMove=function(dir){goTo(cur+dir);};
+})();
+
+/* LENIS-STYLE SMOOTH SCROLL */
+(()=>{
+  let c=0,t=0,running=false;
+  function go(){
+    if(running)return;running=true;
+    (function frame(){
+      c+=(t-c)*.09;
+      window.scrollTo(0,c);
+      if(Math.abs(t-c)>.4)requestAnimationFrame(frame);
+      else running=false;
+    })();
+  }
+  window.addEventListener('wheel',e=>{
+    e.preventDefault();
+    t=Math.max(0,Math.min(document.documentElement.scrollHeight-innerHeight,t+e.deltaY*.87));
+    go();
+  },{passive:false});
+  let ts=0;
+  window.addEventListener('touchstart',e=>{ts=e.touches[0].clientY;},{passive:true});
+  window.addEventListener('touchmove',e=>{
+    const d=ts-e.touches[0].clientY;
+    t=Math.max(0,Math.min(document.documentElement.scrollHeight-innerHeight,t+d*.72));
+    ts=e.touches[0].clientY;go();
+  },{passive:true});
+  window.addEventListener('scroll',()=>{if(!running){c=scrollY;t=scrollY;}},{passive:true});
+})();
+
+/* PARALLAX BACKGROUND (stay card) */
+(function(){
+  const sec=document.getElementById('stay-card');
+  const img=sec&&sec.querySelector('.stay-bg');
+  if(!img||window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  let ticking=false;
+  function update(){
+    ticking=false;
+    const r=sec.getBoundingClientRect();
+    if(r.bottom<0||r.top>window.innerHeight)return;
+    const extra=img.offsetHeight-sec.offsetHeight;
+    const progress=(r.top+r.height)/(window.innerHeight+r.height);
+    img.style.transform='translate3d(0,'+((0.5-progress)*extra).toFixed(1)+'px,0)';
+  }
+  function onScroll(){if(!ticking){ticking=true;requestAnimationFrame(update);}}
+  window.addEventListener('scroll',onScroll,{passive:true});
+  window.addEventListener('resize',onScroll);
+  update();
+})();
+
+/* REVEAL */
+const observer=new IntersectionObserver((es)=>es.forEach(e=>{
+  if(e.isIntersecting){e.target.classList.add('in');observer.unobserve(e.target);}
+}),{threshold:.08});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+
+/* SMOOTH ANCHORS */
+document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{
+  const href=a.getAttribute('href');
+  if(!href||href==='#'){e.preventDefault();window.scrollTo({top:0,behavior:'smooth'});return;}
+  const t=document.querySelector(href);
+  if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth'});}
+}));
+
+/* LANGUAGE PERSISTENCE */
+document.addEventListener('DOMContentLoaded',()=>{
+  try{const l=localStorage.getItem('cb-lang');if(l&&l!=='en'&&T[l])setLang(l);}catch(e){}
+});
+
+/* BOOK NOW: letters turn red one by one under the cursor */
+(function(){
+  const el=document.querySelector('.nav-cta');
+  if(!el) return;
+  const mo=new MutationObserver(split);
+  function split(){
+    mo.disconnect();
+    const t=el.textContent;
+    el.setAttribute('aria-label',t.trim());
+    el.innerHTML=[...t].map(c=>c===' '?' ':'<span class="ch" aria-hidden="true">'+c+'</span>').join('');
+    mo.observe(el,{childList:true});
+  }
+  split();
+})();
+</script>
+<!-- LANG SWITCHER, fixed right side -->
+<div class="lang-switcher">
+  <button class="lang-btn active" onclick="setLang('en')">EN</button>
+  <div class="lang-sep"></div>
+  <button class="lang-btn" onclick="setLang('es')">ES</button>
+  <div class="lang-sep"></div>
+  <button class="lang-btn" onclick="setLang('fr')">FR</button>
+</div>
+
+</body>
+</html>
