@@ -344,6 +344,24 @@ footer{background:var(--ink);border-top:1px solid rgba(255,255,255,.06);padding:
   .hero-arch-pill-text{font-size:1rem;}
 }
 
+/* MOBILE CAROUSELS (occasions: défilement lent continu / avis: un par un avec points) */
+.occ-card.clone{display:none;}
+.rev-dots{display:none;}
+@media(max-width:768px){
+  .occ-card.reveal,.rev-card.reveal{opacity:1 !important;transform:none !important;}
+  .occ-grid{display:flex;gap:12px;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;margin:40px -24px 0;padding:0 24px;}
+  .occ-grid::-webkit-scrollbar,.rev-grid::-webkit-scrollbar{display:none;}
+  .occ-card{flex:0 0 72vw;min-height:380px;}
+  .occ-card.clone{display:flex;}
+  .occ-card:hover{transform:none;}
+  .rev-grid{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding:0 24px;scrollbar-width:none;margin:0 -24px;padding:0 24px;}
+  .rev-card{flex:0 0 100%;scroll-snap-align:start;padding:28px 24px;}
+  .rev-card:hover{transform:none;}
+  .rev-dots{display:flex;justify-content:center;gap:8px;margin-top:22px;}
+  .rev-dot{width:8px;height:8px;border-radius:50%;border:0;padding:0;background:rgba(26,24,20,.2);transition:width .3s,background .3s;}
+  .rev-dot.on{width:24px;border-radius:8px;background:var(--teal-d);}
+}
+
 /* MOBILE NAV (burger menu) */
 .nav-burger{display:none;}
 #mobile-menu{display:none;}
@@ -1038,6 +1056,56 @@ document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;});
     ts=e.touches[0].clientY;go();
   },{passive:true});
   window.addEventListener('scroll',()=>{if(!running){c=scrollY;t=scrollY;}},{passive:true});
+})();
+
+/* MOBILE CAROUSELS */
+(function(){
+  const mq=window.matchMedia('(max-width:768px)');
+  if(!mq.matches)return;
+  const reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Occasions : défilement lent et continu, boucle infinie, le doigt reprend la main
+  const occ=document.querySelector('.occ-grid');
+  if(occ){
+    const cards=[...occ.children];
+    cards.forEach(c=>{const k=c.cloneNode(true);k.classList.add('clone');k.setAttribute('aria-hidden','true');occ.appendChild(k);});
+    let pos=0,paused=false,visible=false,resume;
+    const hold=()=>{paused=true;clearTimeout(resume);};
+    const release=()=>{clearTimeout(resume);resume=setTimeout(()=>{pos=occ.scrollLeft;paused=false;},1800);};
+    occ.addEventListener('touchstart',hold,{passive:true});
+    occ.addEventListener('touchend',release,{passive:true});
+    occ.addEventListener('touchcancel',release,{passive:true});
+    new IntersectionObserver(e=>{visible=e[0].isIntersecting;}).observe(occ);
+    (function tick(){
+      if(!reduce&&visible&&!paused&&mq.matches){
+        const loop=cards[cards.length-1].offsetLeft+cards[cards.length-1].offsetWidth+12-cards[0].offsetLeft;
+        pos+=.45;if(pos>=loop)pos-=loop;
+        occ.scrollLeft=pos;
+      }
+      requestAnimationFrame(tick);
+    })();
+  }
+
+  // Avis : un avis à la fois (snap), points de navigation, avance toute seule
+  const rev=document.querySelector('.rev-grid');
+  if(rev){
+    const cards=[...rev.children];
+    const dots=document.createElement('div');dots.className='rev-dots';
+    const ds=cards.map((_,i)=>{const b=document.createElement('button');b.className='rev-dot'+(i?'':' on');b.setAttribute('aria-label','Avis '+(i+1));b.onclick=()=>go(i);dots.appendChild(b);return b;});
+    rev.after(dots);
+    let cur=0,timer,visible=false;
+    const step=()=>cards[1]?cards[1].offsetLeft-cards[0].offsetLeft:rev.clientWidth;
+    function go(i){cur=(i+cards.length)%cards.length;rev.scrollTo({left:cur*step(),behavior:'smooth'});}
+    rev.addEventListener('scroll',()=>{
+      const i=Math.round(rev.scrollLeft/step());
+      if(i!==cur||!ds[i].classList.contains('on')){cur=i;ds.forEach((d,j)=>d.classList.toggle('on',j===i));}
+    },{passive:true});
+    const start=()=>{clearInterval(timer);if(!reduce)timer=setInterval(()=>{if(visible&&mq.matches)go(cur+1);},5000);};
+    ['touchstart','pointerdown'].forEach(ev=>rev.addEventListener(ev,()=>clearInterval(timer),{passive:true}));
+    rev.addEventListener('touchend',start,{passive:true});
+    new IntersectionObserver(e=>{visible=e[0].isIntersecting;}).observe(rev);
+    start();
+  }
 })();
 
 /* PARALLAX BACKGROUND (stay card) */
