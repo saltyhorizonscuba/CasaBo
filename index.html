@@ -93,6 +93,7 @@ nav{position:fixed;top:20px;left:50%;transform:translateX(-50%);z-index:300;widt
 #hero{position:relative;height:110svh;min-height:700px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;overflow:visible;}
 .hero-video{position:absolute;inset:0;z-index:0;overflow:hidden;}
 .hero-video video{width:100%;height:100%;object-fit:cover;object-position:center;display:block;transform:scale(1.714);transform-origin:66.1% 79.65%;}
+@media(max-width:768px){.hero-video video{transform:scale(1.15);transform-origin:66% 80%;}}
 .hero-video::after{content:'';position:absolute;inset:0;background:rgba(18,14,9,.38);}
 .hero-content{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;padding:0 32px;margin-top:300px;}
 .hero-eyebrow{font-size:.63rem;font-weight:400;letter-spacing:.3em;text-transform:uppercase;color:rgba(255,255,255,.65);margin-top:22px;}
@@ -245,10 +246,10 @@ nav{position:fixed;top:20px;left:50%;transform:translateX(-50%);z-index:300;widt
 .occ-photo{position:absolute;inset:0;background-size:cover;background-position:center;transition:transform .8s cubic-bezier(.23,1,.32,1);}
 .occ-card:hover .occ-photo{transform:scale(1.06);}
 .occ-overlay{position:absolute;inset:0;background:rgba(18,14,9,.50);}
-.occ-photo.c1{background:#1A6E6A url('https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6NDYzNTUxMjI%3D/original/ba8e86ef-c1ce-44ef-b34e-7676cf56cf66.jpeg') center/cover no-repeat;}
-.occ-photo.c2{background:#5C3A22 url('https://a0.muscache.com/im/pictures/miso/Hosting-46355122/original/289811b6-941e-4fb7-9e33-263da2511100.jpeg') center/cover no-repeat;}
-.occ-photo.c3{background:#2A4A2A url('https://a0.muscache.com/im/pictures/de5e6734-7b39-4022-9690-95dd60506ba9.jpg') center/cover no-repeat;}
-.occ-photo.c4{background:#1A2A4A url('https://a0.muscache.com/im/pictures/ba95d89d-3c50-4e63-bbeb-52056bb40a17.jpg') center/cover no-repeat;}
+.occ-photo.c1{background:#1A6E6A url('assets/images/airbnb-ba8e86ef.jpg') center/cover no-repeat;}
+.occ-photo.c2{background:#5C3A22 url('assets/images/airbnb-289811b6.jpg') center/cover no-repeat;}
+.occ-photo.c3{background:#2A4A2A url('assets/images/airbnb-de5e6734.jpg') center/cover no-repeat;}
+.occ-photo.c4{background:#1A2A4A url('assets/images/airbnb-ba95d89d.jpg') center/cover no-repeat;}
 .occ-content{position:relative;z-index:2;}
 .occ-tag{font-size:.58rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-bottom:6px;}
 .occ-name{font-family:var(--serif);font-size:1.55rem;font-weight:300;font-style:normal;color:var(--cream);line-height:1.2;}
@@ -401,7 +402,7 @@ footer{background:var(--ink);border-top:1px solid rgba(255,255,255,.06);padding:
 <!-- HERO -->
 <section id="hero">
   <div class="hero-video">
-    <video autoplay muted loop playsinline preload="metadata" poster="assets/images/pool2.jpg">
+    <video autoplay muted loop playsinline preload="auto" poster="assets/images/pool2.jpg">
       <source src="assets/video/diving_in_pool_casa_bo.mp4" type="video/mp4">
     </video>
   </div>
@@ -478,7 +479,7 @@ footer{background:var(--ink);border-top:1px solid rgba(255,255,255,.06);padding:
       </div>
     </div>
 
-    <div class="ss-slide" style="background-image:url('https://a0.muscache.com/im/pictures/d36b5b71-9781-4763-adca-4e072e5d641d.jpg')">
+    <div class="ss-slide" style="background-image:url('assets/images/airbnb-d36b5b71.jpg')">
       <div class="ss-overlay"></div>
       <div class="ss-caption">
         <div class="ss-caption-label" data-i18n="bed.sublabel">Three bedrooms · Four bathrooms</div>
@@ -486,7 +487,7 @@ footer{background:var(--ink);border-top:1px solid rgba(255,255,255,.06);padding:
       </div>
     </div>
 
-    <div class="ss-slide" style="background-image:url('https://a0.muscache.com/im/pictures/cc9e302c-da2c-4ceb-833d-2bc492b20983.jpg')">
+    <div class="ss-slide" style="background-image:url('assets/images/airbnb-cc9e302c.jpg')">
       <div class="ss-overlay"></div>
       <div class="ss-caption">
         <div class="ss-caption-label" data-i18n="bed.2.tag_slide">Bedroom Two</div>
@@ -494,7 +495,7 @@ footer{background:var(--ink);border-top:1px solid rgba(255,255,255,.06);padding:
       </div>
     </div>
 
-    <div class="ss-slide" style="background-image:url('https://a0.muscache.com/im/pictures/3a39fa56-3b78-40d5-9759-9d724f2dcc9a.jpg')">
+    <div class="ss-slide" style="background-image:url('assets/images/airbnb-3a39fa56.jpg')">
       <div class="ss-overlay"></div>
       <div class="ss-caption">
         <div class="ss-caption-label" data-i18n="bed.3.tag_slide">Bedroom Three</div>
@@ -1008,6 +1009,8 @@ document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;});
 
 /* LENIS-STYLE SMOOTH SCROLL */
 (()=>{
+  // Tactile : le scroll natif est déjà fluide, le détourner provoque des sauts
+  if(!window.matchMedia('(hover:hover) and (pointer:fine)').matches)return;
   let c=0,t=0,running=false;
   function go(){
     if(running)return;running=true;
