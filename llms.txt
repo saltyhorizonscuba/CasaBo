@@ -3,11 +3,11 @@
 > Casa Bö is a luxury vacation villa with a private pool on Playa Langosta, Guanacaste, Costa Rica, four minutes from Tamarindo. Three bedrooms, sleeps up to 8, with Balinese furniture, an open-plan kitchen and a merged indoor/outdoor living space. Also listed on Airbnb and Vrbo.
 
 ## Pages
-- [Home](https://YOUR-DOMAIN.com/): Overview, rating and reviews, who the villa suits
-- [The Space](https://YOUR-DOMAIN.com/the-space.html): Pool, three bedrooms, kitchen, living room, amenities
-- [Staff & Services](https://YOUR-DOMAIN.com/services.html): Included housekeeping and bookable extras (private chef, transfers, massage, yoga, scuba, tours)
-- [Location](https://YOUR-DOMAIN.com/location.html): Distances to the beach, Tamarindo, Liberia (LIR) and San José (SJO) airports
-- [Book Your Stay](https://YOUR-DOMAIN.com/book.html): Request dates directly or book on Airbnb or Vrbo
+- [Home](https://casabotamarindo.com/): Overview, rating and reviews, who the villa suits
+- [The Space](https://casabotamarindo.com/the-space.html): Pool, three bedrooms, kitchen, living room, amenities
+- [Staff & Services](https://casabotamarindo.com/services.html): Included housekeeping and bookable extras (private chef, transfers, massage, yoga, scuba, tours)
+- [Location](https://casabotamarindo.com/location.html): Distances to the beach, Tamarindo, Liberia (LIR) and San José (SJO) airports
+- [Book Your Stay](https://casabotamarindo.com/book.html): Request dates directly or book on Airbnb or Vrbo
 
 ## Key facts
 - Location: Playa Langosta, Tamarindo, Guanacaste, Costa Rica
