@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Page not found · Casa Bö</title>
+<meta name="robots" content="noindex,follow">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --cream:#FAF8F4;--ink:#1A1814;--teal:#2BBFB3;--teal-d:#1A9E93;
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --sans:'DM Sans',sans-serif;
+}
+html,body{height:100%;}
+body{background:var(--ink);color:var(--cream);font-family:var(--sans);font-weight:300;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:32px 24px;position:relative;overflow:hidden;}
+body::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 40%,rgba(43,191,179,.16),transparent 62%);pointer-events:none;}
+main{position:relative;display:flex;flex-direction:column;align-items:center;max-width:560px;}
+.logo{width:72px;height:auto;margin-bottom:36px;}
+.code{font-family:var(--serif);font-weight:300;font-size:clamp(6rem,22vw,11rem);line-height:.9;letter-spacing:.04em;color:var(--cream);}
+.code em{font-style:italic;color:var(--teal);}
+h1{font-family:var(--serif);font-weight:300;font-style:italic;font-size:clamp(1.6rem,4.5vw,2.2rem);margin:22px 0 14px;}
+p{font-size:1rem;line-height:1.7;color:rgba(250,248,244,.7);margin-bottom:38px;}
+.actions{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 30px;border-radius:100px;font-size:.78rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;transition:background .25s,color .25s,border-color .25s;}
+.btn.solid{background:var(--cream);color:var(--ink);}
+.btn.solid:hover{background:var(--teal);}
+.btn.ghost{border:1px solid rgba(250,248,244,.35);color:var(--cream);}
+.btn.ghost:hover{border-color:var(--teal);color:var(--teal);}
+:focus-visible{outline:2px solid var(--teal);outline-offset:3px;}
+footer{position:absolute;bottom:22px;left:0;right:0;font-size:.7rem;letter-spacing:.12em;color:rgba(250,248,244,.35);}
+</style>
+</head>
+<body>
+<main>
+  <a href="/"><img class="logo" src="/assets/images/casa_bo_logo_light.png" width="240" height="318" alt="Casa Bö"></a>
+  <div class="code">4<em>0</em>4</div>
+  <h1>This page drifted out to sea</h1>
+  <p>The page you are looking for does not exist or has moved. Head back to the villa, or take a look around.</p>
+  <div class="actions">
+    <a class="btn solid" href="/">Back to home</a>
+    <a class="btn ghost" href="/the-space.html">The Space</a>
+    <a class="btn ghost" href="/book.html">Book your stay</a>
+  </div>
+</main>
+<footer>© 2026 Casa Bö · Playa Langosta · Costa Rica</footer>
+</body>
+</html>
