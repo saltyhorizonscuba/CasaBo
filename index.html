@@ -93,7 +93,7 @@ nav{position:fixed;top:20px;left:50%;transform:translateX(-50%);z-index:300;widt
 /* HERO */
 #hero{position:relative;height:110svh;min-height:700px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;overflow:visible;}
 .hero-video{position:absolute;inset:0;z-index:0;overflow:hidden;}
-.hero-video video{width:100%;height:100%;object-fit:cover;object-position:center;display:block;transform:scale(1.714);transform-origin:66.1% 79.65%;}
+.hero-video video{width:100%;height:100%;object-fit:cover;object-position:center;display:block;transform:none;}
 @media(max-width:768px){.hero-video video{transform:scale(1.15);transform-origin:66% 80%;}}
 .hero-video::after{content:'';position:absolute;inset:0;background:rgba(18,14,9,.38);}
 .hero-content{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;padding:0 32px;margin-top:300px;}
@@ -421,9 +421,9 @@ footer{background:var(--ink);border-top:1px solid rgba(255,255,255,.06);padding:
 <!-- HERO -->
 <section id="hero">
   <div class="hero-video">
-    <video autoplay muted loop playsinline preload="metadata" poster="assets/images/pool2.webp">
-      <source src="assets/video/diving_in_pool_casa_bo.mp4" type="video/mp4">
+    <video autoplay muted loop playsinline preload="auto" poster="assets/images/pool2.webp">
     </video>
+    <script>(function(){var v=document.querySelector(".hero-video video");v.src=matchMedia("(max-width:768px)").matches?"assets/video/diving_in_pool_casa_bo_mobile.mp4":"assets/video/diving_in_pool_casa_bo_desktop.mp4";var p=v.play();if(p&&p.catch)p.catch(function(){});})();</script>
   </div>
   <div class="hero-content">
     <h1 class="hero-h1">
