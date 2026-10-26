@@ -7,6 +7,10 @@
 <!-- seo:start -->
 <meta name="description" content="Casa Bö, a luxury 3-bedroom vacation villa with private pool steps from Playa Langosta, 4 minutes from Tamarindo, Costa Rica. Sleeps 8. Book direct.">
 <link rel="canonical" href="https://casabotamarindo.com/">
+<link rel="alternate" hreflang="en" href="https://casabotamarindo.com/">
+<link rel="alternate" hreflang="es" href="https://casabotamarindo.com/es/">
+<link rel="alternate" hreflang="fr" href="https://casabotamarindo.com/fr/">
+<link rel="alternate" hreflang="x-default" href="https://casabotamarindo.com/">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -82,7 +86,7 @@ nav{position:fixed;top:20px;left:50%;transform:translateX(-50%);z-index:300;widt
   width:100%;
 }
 .lang-btn:hover{color:rgba(250,248,244,.85);}
-.lang-btn.active{color:var(--teal);}
+.lang-btn.active{color:var(--teal);}a.lang-btn{display:block;text-decoration:none;text-align:center;}
 .lang-sep{width:20px; height:1px; background:rgba(255,255,255,.08);}
 @media(max-width:560px){
   .lang-switcher{right:10px; top:auto; bottom:24px; transform:none; flex-direction:row; padding:0 6px; border-radius:100px;}
@@ -694,291 +698,7 @@ footer{background:var(--ink);border-top:1px solid rgba(255,255,255,.06);padding:
 })();
 
 /* ── TRANSLATIONS ── */
-const T = {
-  en: {
-    'bed.2.tag_slide':'Bedroom Two','bed.3.tag_slide':'Bedroom Three',
-    'kitchen.label_slide':'The Kitchen','living.label_slide':'The Living Room',
-    'ss.night.label':'By Night','ss.night.title':'Casa Bö after dark',
-    'ss.explore':'Explore The Space →',
-    'nav.villa':'Home','nav.gallery':'The Space','nav.occasions':'Occasions',
-    'nav.services':'Services','nav.location':'Location','nav.book':'Book Now','nav.blog':'Blog',
-    'hero.eyebrow':'Playa Langosta · Guanacaste · Costa Rica',
-    'hero.welcome':'Welcome to','hero.tagline':'A luxurious beach retreat, steps from the sea.',
-    'hero.pill':'Your Private<br>Paradise',
-    'ticker.t1':'Open-Air Living','ticker.t2':'Private Pool',
-    'ticker.t3':'4 min to Tamarindo','ticker.t4':'5.0 Stars Reviews',
-    'intro.heading':'A sanctuary of <em>indoor–outdoor</em> living',
-    'chips.bed':'Bedrooms','chips.bath':'Bathrooms','chips.guests':'Guests',
-    'chips.poolval':'Private','chips.pool':'Pool',
-    'intro.p1':'Welcome to Casa Bö, a luxurious vacation rental just steps from Playa Langosta and four minutes from Tamarindo\'s celebrated surf town, home to vibrant bars, refined restaurants, boutiques, spas, and legendary nightlife.',
-    'intro.p2':'Casa Bö\'s open-living concept invites you to reconnect with nature while enjoying every comfort of a luxury home. The merged indoor/outdoor space features a spectacular open-plan kitchen, custom-made Balinese furniture, and a living room that mirrors the stillness of a turquoise swimming pool set within a lush tropical garden.',
-    'intro.quote':'"Aesthetic 10/10, pure bliss. Beautiful design, peaceful, extremely clean. They thought of everything."',
-    'intro.cite':'Deanna M., Verified Guest · 5 Stars',
-    'cta.book':'Book on Airbnb','cta.see':'See the Space',
-    'gallery.pool':'Private Pool','gallery.living':'Living Area','gallery.interior':'Interior',
-    'gallery.outdoor':'Outdoor Space','gallery.kitchen':'Kitchen',
-    'features.title':'Space',
-    'feat.1.name':'Open-Living Concept','feat.1.desc':'A seamlessly merged indoor and outdoor space that dissolves the boundary between architecture and nature.',
-    'feat.2.name':'Turquoise Private Pool','feat.2.desc':'A spectacular pool set within a lush tropical garden, the living room mirrors its still, luminous surface.',
-    'feat.3.name':'Custom Balinese Furniture','feat.3.desc':'Every piece handcrafted. Artisanal Balinese furniture brings warmth and soul to every corner.',
-    'feat.4.name':'Open-Plan Kitchen','feat.4.desc':'Spectacular and fully-equipped, flowing directly into the living and outdoor areas, ideal for group celebrations.',
-    'feat.5.name':'Daily Housekeeping','feat.5.desc':'4 hours of professional housekeeping included daily (except weekends and statutory holidays).',
-    'feat.6.name':'Steps to the Beach','feat.6.desc':'Playa Langosta at your doorstep. Tamarindo\'s surf, dining, and nightlife just four minutes away.',
-    'am.label':'Amenities','am.title':'Everything considered','am.ac':'Air Conditioning','am.pool':'Private Pool',
-    'am.kitchen':'Full Kitchen','am.terrace':'Terrace & Balcony','am.parking':'Free Parking',
-    'am.child':'Child Friendly','am.bbq':'BBQ Outdoor','am.beach':'Beach Access',
-    'am.garden':'Tropical Garden','am.laundry':'Laundry','am.workspace':'Dedicated Workspace',
-    'am.guests':'Up to 8 Guests','am.linens':'Premium Linens','am.concierge':'Concierge Services',
-    'bed.label':'Where You\'ll','bed.em_word':'Sleep','bed.sublabel':'Three bedrooms · Four bathrooms','bed.sublabel':'Three bedrooms · Four bathrooms','bed.title':'Three rooms,','bed.em':'one dream',
-    'bed.1.name':'Master Suite','bed.1.spec':'1 King bed · En-suite bathroom',
-    'bed.2.name':'Bedroom Two','bed.2.spec':'1 Queen bed · En-suite bathroom',
-    'bed.3.name':'Bedroom Three','bed.3.spec':'2 Queen beds · 2 Single beds',
-    'kitchen.label':'The Kitchen','kitchen.em_word':'Kitchen','kitchen.em_word':'Kitchen','kitchen.title':'Open, bright','kitchen.em':'fully equipped',
-    'kitchen.1.name':'Open-Plan Kitchen','kitchen.1.spec':'Fully equipped · Flows into living area',
-    'kitchen.2.name':'Dining Area','kitchen.2.spec':'Seats 8 · Indoor & outdoor dining',
-    'kitchen.3.name':'Premium Appliances','kitchen.3.spec':'Espresso machine · Full cookware',
-    'living.label':'The Living Room','living.em_word':'Living Room','living.em_word':'Living Room','living.title':'Where nature','living.em':'where nature comes inside',
-    'living.1.name':'Open Living Space','living.1.spec':'Balinese furniture · Indoor-outdoor flow',
-    'living.2.name':'Lounge & Terrace','living.2.spec':'Smart TV · Garden views · Outdoor seating',
-    'living.3.name':'Artisan Details','living.3.spec':'Hand-carved accents · Tropical textiles',
-    'pool.label':'Pool & Outdoor','pool.sublabel':'Pool & Outdoor','pool.title':'Your private','pool.em':'oasis',
-    'pool.1.name':'Turquoise Pool','pool.1.spec':'Private · Surrounded by tropical garden',
-    'pool.2.name':'Fire Pit','pool.2.spec':'Poolside · Perfect for evening gatherings',
-    'pool.3.name':'Outdoor BBQ','pool.3.spec':'Full grill setup · Al fresco dining · Garden lounge',
-    'occ.label':'Perfect For','occ.title':'Celebrate every','occ.em':'moment',
-    'occ.1.tag':'Ceremony & Reception','occ.1.name':'Intimate Weddings',
-    'occ.2.tag':'Romance & Escape','occ.2.name':'Honeymoon Retreats',
-    'occ.3.tag':'Multi-Generational','occ.3.name':'Family Celebrations',
-    'occ.4.tag':'Groups & Getaways','occ.4.name':'Friends\' Escapes',
-    'svc.label':'Staff & Services','svc.title':'Staff and Services',
-    'svc.1.name':'Housekeeping','svc.1.desc':'Included, 4 hours daily (except weekends & statutory holidays)',
-    'svc.2.name':'Private Chef','svc.2.desc':'Available on request, curated menus prepared in your open-plan kitchen',
-    'svc.3.name':'Grocery Pre-Stocking','svc.3.desc':'Arrive to a fully stocked kitchen with groceries, wine, and essentials ready',
-    'svc.4.name':'Airport Transfers','svc.4.desc':'Private transfers from LIR · Liberia (~1.5 hrs) or SJO · San José (~4.5 hrs)',
-    'svc.5.name':'Concierge','svc.5.desc':'Private chef, activities such as scuba diving, surfing, canopy, wildlife and boat tours. Tamarindo is your gateway to Guanacaste',
-    'svc.aside.title':'A stay without compromise',
-    'svc.aside.p1':'Casa Bö is also available as a self-contained apartment for up to four guests, offering the same Balinese luxury at a more intimate scale.',
-    'svc.aside.p2':'All special requests welcomed. Our team handles everything so you can simply arrive and exhale.',
-    'ci.in':'Check-in','ci.in.val':'From 4:00 pm','ci.out':'Check-out','ci.out.val':'Before 10:00 am','ci.age':'Min. age',
-    'rev.label':'Guest Voices','rev.title':'Written in','rev.em':'wonder',
-    'rev.reviews':'reviews','rev.pct':'100% five-star',
-    'rev.cats':'Cleanliness · Accuracy · Check-in · Communication · Location · Value',
-    'rev.gf':'Guest Favorite','rev.gfsub':'Top 1% of eligible listings',
-    'rev.1':'"Gorgeous, tropical and welcoming. The neighborhood is filled with wonderful restaurants you can walk or take a golf cart to. Casa Bö is a must stay."',
-    'rev.2':'"Aesthetic 10/10, pure bliss. Beautiful design, peaceful, extremely clean. Everything we needed and more. They thought of everything."',
-    'rev.3':'"The décor is stunning, unique in the most awesome way. The host answered every question. Like having our own personal concierge service."',
-    'rev.3.who':'Verified Guest',
-    'loc.label':'Location','loc.title':'In the heart of',
-    'loc.p':'Playa Langosta offers the tranquility of a private beach escape with all the energy of Tamarindo just minutes away. Surf. Explore. Return to stillness.',
-    'loc.d1':'Playa Langosta Beach','loc.d1v':'Steps away',
-    'loc.d2':'Tamarindo Beach & Town','loc.d2v':'4 min drive',
-    'loc.d3v':'~1.5 hour','loc.d4v':'~4.5 hours',
-    'loc.d5':'Restaurants & Bars','loc.d5v':'Walking distance',
-    'cta.eyebrow':'Reserve Your Stay','cta.h2a':'Your','cta.h2b':'escape','cta.h2c':'awaits',
-    'cta.sub':'Steps from the Pacific. Rooted in luxury. Surrounded by nature. Casa Bö is ready for you.',
-    'cta.vrbo':'View on Vrbo',
-    'pool.blurb':'A spectacular pool set within a lush tropical garden, the living room mirrors its still, luminous surface. Casa Bö\'s open-living concept seamlessly dissolves the boundary between architecture and nature.',
-    'bed.blurb':'Each bedroom is a private retreat with premium linens, Balinese-crafted furnishings, and thoughtful details. Daily housekeeping ensures everything feels fresh and cared for throughout your stay.',
-    'kitchen.blurb':'Spectacular and fully-equipped, the open-plan kitchen flows directly into the living and outdoor areas, ideal for group celebrations, al fresco breakfasts, and everything in between.',
-    'living.blurb':'Every piece is handcrafted, artisanal Balinese furniture brings warmth and soul to every corner. The merged indoor/outdoor space invites you to live fully, beautifully, and without boundaries.',
-  },
-  es: {
-    'bed.2.tag_slide':'Habitación Dos','bed.3.tag_slide':'Habitación Tres',
-    'kitchen.label_slide':'La Cocina','living.label_slide':'La Sala de Estar',
-    'ss.night.label':'De Noche','ss.night.title':'Casa Bö de noche',
-    'ss.explore':'Explorar El Espacio →',
-    'nav.villa':'Inicio','nav.gallery':'El Espacio','nav.occasions':'Ocasiones',
-    'nav.services':'Servicios','nav.location':'Ubicación','nav.book':'Reservar','nav.blog':'Blog',
-    'hero.eyebrow':'Playa Langosta · Guanacaste · Costa Rica',
-    'hero.welcome':'Bienvenido a','hero.tagline':'Un retiro de lujo junto al mar.',
-    'hero.pill':'Tu Paraíso<br>Privado',
-    'ticker.t1':'Vida al Aire Libre','ticker.t2':'Piscina Privada',
-    'ticker.t3':'4 min a Tamarindo','ticker.t4':'5.0 Estrellas',
-    'intro.heading':'Un santuario de vida <em>interior–exterior</em>',
-    'chips.bed':'Habitaciones','chips.bath':'Baños','chips.guests':'Huéspedes',
-    'chips.poolval':'Piscina','chips.pool':'Privada',
-    'intro.p1':'Bienvenido a Casa Bö, un lujoso alquiler vacacional a pasos de Playa Langosta y a cuatro minutos del famoso pueblo surfero de Tamarindo, con bares vibrantes, restaurantes refinados, boutiques, spas y una legendaria vida nocturna.',
-    'intro.p2':'El concepto de vida abierta de Casa Bö es una invitación a reconectarse con la naturaleza mientras disfrutas de todas las comodidades de un hogar de lujo. El espacio fusionado interior/exterior cuenta con una espectacular cocina abierta, muebles balineses personalizados y una sala de estar que refleja la quietud de una piscina turquesa en un exuberante jardín tropical.',
-    'intro.quote':'"Estética 10/10, pura felicidad. Diseño hermoso, tranquilo, extremadamente limpio. Pensaron en todo."',
-    'intro.cite':'Deanna M., Huésped Verificada · 5 Estrellas',
-    'cta.book':'Reservar en Airbnb','cta.see':'Ver el Espacio',
-    'gallery.pool':'Piscina Privada','gallery.living':'Sala de Estar','gallery.interior':'Interior',
-    'gallery.outdoor':'Espacio Exterior','gallery.kitchen':'Cocina',
-    'features.title':'Espacio',
-    'feat.1.name':'Concepto de Vida Abierta','feat.1.desc':'Un espacio interior y exterior perfectamente fusionado que disuelve la frontera entre la arquitectura y la naturaleza.',
-    'feat.2.name':'Piscina Privada Turquesa','feat.2.desc':'Una piscina espectacular en un exuberante jardín tropical, cuya superficie luminosa se refleja en la sala de estar.',
-    'feat.3.name':'Muebles Balineses Personalizados','feat.3.desc':'Cada pieza es artesanal. Los muebles balineses aportan calidez y alma a cada rincón.',
-    'feat.4.name':'Cocina Abierta','feat.4.desc':'Espectacular y totalmente equipada, integrada con las áreas de estar y exterior, ideal para celebraciones en grupo.',
-    'feat.5.name':'Limpieza Diaria','feat.5.desc':'4 horas de limpieza profesional incluidas diariamente (excepto fines de semana y días festivos).',
-    'feat.6.name':'A Pasos de la Playa','feat.6.desc':'Playa Langosta a tu puerta. El surf, la gastronomía y la vida nocturna de Tamarindo a solo cuatro minutos.',
-    'am.label':'Servicios','am.title':'Todo incluido','am.ac':'Aire Acondicionado','am.pool':'Piscina Privada',
-    'am.kitchen':'Cocina Completa','am.terrace':'Terraza y Balcón','am.parking':'Estacionamiento Gratis',
-    'am.child':'Apto para Niños','am.bbq':'BBQ Exterior','am.beach':'Acceso a la Playa',
-    'am.garden':'Jardín Tropical','am.laundry':'Lavandería','am.workspace':'Espacio de Trabajo',
-    'am.guests':'Hasta 8 Huéspedes','am.linens':'Ropa de Cama Premium','am.concierge':'Servicio de Conserjería',
-    'bed.label':'Donde','bed.em_word':'Dormirás','bed.sublabel':'Tres habitaciones · Cuatro baños','bed.sublabel':'Tres habitaciones · Cuatro baños','bed.title':'Tres habitaciones,','bed.em':'un sueño',
-    'bed.1.name':'Suite Principal','bed.1.spec':'1 cama King · Baño en suite',
-    'bed.2.name':'Habitación Dos','bed.2.spec':'1 cama Queen · Baño en suite',
-    'bed.3.name':'Habitación Tres','bed.3.spec':'2 camas Queen · 2 camas individuales',
-    'kitchen.label':'La','kitchen.em_word':'Cocina','kitchen.title':'Abierta, luminosa','kitchen.em':'totalmente equipada',
-    'kitchen.1.name':'Cocina Abierta','kitchen.1.spec':'Completamente equipada · Integrada con la sala',
-    'kitchen.2.name':'Área de Comedor','kitchen.2.spec':'Para 8 personas · Comedor interior y exterior',
-    'kitchen.3.name':'Electrodomésticos Premium','kitchen.3.spec':'Cafetera espresso · Utensilios completos',
-    'living.label':'La','living.em_word':'Sala de Estar','living.title':'Donde la naturaleza','living.em':'donde la naturaleza entra',
-    'living.1.name':'Espacio de Vida Abierto','living.1.spec':'Muebles balineses · Flujo interior-exterior',
-    'living.2.name':'Salón y Terraza','living.2.spec':'Smart TV · Vistas al jardín · Zona de descanso exterior',
-    'living.3.name':'Detalles Artesanales','living.3.spec':'Tallas a mano · Textiles tropicales',
-    'pool.label':'Piscina y Exterior','pool.sublabel':'Piscina y Exterior','pool.title':'Tu oasis','pool.em':'privado',
-    'pool.1.name':'Piscina Turquesa','pool.1.spec':'Privada · Rodeada de jardín tropical',
-    'pool.2.name':'Fogón Exterior','pool.2.spec':'Junto a la piscina · Perfecto para reuniones nocturnas',
-    'pool.3.name':'Parrilla Exterior','pool.3.spec':'Parrilla completa · Comedor al aire libre · Jardín lounge',
-    'occ.label':'Ideal Para','occ.title':'Celebra cada','occ.em':'momento',
-    'occ.1.tag':'Ceremonia y Recepción','occ.1.name':'Bodas Íntimas',
-    'occ.2.tag':'Romance y Escape','occ.2.name':'Luna de Miel',
-    'occ.3.tag':'Multigeneracional','occ.3.name':'Celebraciones Familiares',
-    'occ.4.tag':'Grupos y Escapadas','occ.4.name':'Escapadas con Amigos',
-    'svc.label':'Personal y Servicios','svc.title':'Personal y Servicios',
-    'svc.1.name':'Limpieza','svc.1.desc':'Incluida, 4 horas diarias (excepto fines de semana y festivos)',
-    'svc.2.name':'Chef Privado','svc.2.desc':'Disponible bajo pedido, menús elaborados en tu cocina abierta',
-    'svc.3.name':'Despensa Pre-abastecida','svc.3.desc':'Llega a una cocina completamente abastecida con víveres, vino y todo lo necesario',
-    'svc.4.name':'Traslados al Aeropuerto','svc.4.desc':'Traslados privados desde LIR · Liberia (~1.5 hrs) o SJO · San José (~4.5 hrs)',
-    'svc.5.name':'Conserjería','svc.5.desc':'Chef privado, actividades como buceo, surf, canopy, fauna y tours en bote. Tamarindo es tu puerta a Guanacaste',
-    'svc.aside.title':'Una estadía sin compromisos',
-    'svc.aside.p1':'Casa Bö también está disponible como apartamento independiente para hasta cuatro huéspedes, ofreciendo el mismo lujo balinés a una escala más íntima.',
-    'svc.aside.p2':'Todas las solicitudes especiales son bienvenidas. Nuestro equipo se encarga de todo para que solo tengas que llegar y relajarte.',
-    'ci.in':'Llegada','ci.in.val':'Desde las 4:00 pm','ci.out':'Salida','ci.out.val':'Antes de las 10:00 am','ci.age':'Edad mín.',
-    'rev.label':'Voces de Huéspedes','rev.title':'Escrito con','rev.em':'asombro',
-    'rev.reviews':'reseñas','rev.pct':'100% cinco estrellas',
-    'rev.cats':'Limpieza · Exactitud · Check-in · Comunicación · Ubicación · Valor',
-    'rev.gf':'Favorito de Huéspedes','rev.gfsub':'Top 1% de los alojamientos',
-    'rev.1':'"Hermoso, tropical y acogedor. El vecindario está lleno de restaurantes a los que puedes ir caminando o en carrito de golf. Casa Bö es imprescindible."',
-    'rev.2':'"Estética 10/10, pura felicidad. Diseño hermoso, tranquilo, extremadamente limpio. Todo lo que necesitábamos y más. Pensaron en todo."',
-    'rev.3':'"La decoración es impresionante, única de la mejor manera. El anfitrión respondió cada pregunta. Como tener nuestro propio servicio de conserjería."',
-    'rev.3.who':'Huésped Verificado',
-    'loc.label':'Ubicación','loc.title':'En el corazón de',
-    'loc.p':'Playa Langosta ofrece la tranquilidad de un escape privado en la playa con toda la energía de Tamarindo a pocos minutos. Surfea. Explora. Regresa a la calma.',
-    'loc.d1':'Playa Langosta','loc.d1v':'A pasos',
-    'loc.d2':'Playa y Pueblo Tamarindo','loc.d2v':'4 min en auto',
-    'loc.d3v':'~1.5 hora','loc.d4v':'~4.5 horas',
-    'loc.d5':'Restaurantes y Bares','loc.d5v':'A pie',
-    'cta.eyebrow':'Reserva Tu Estadía','cta.h2a':'Tu','cta.h2b':'paraíso','cta.h2c':'te espera',
-    'cta.sub':'A pasos del Pacífico. Con raíces de lujo. Rodeado de naturaleza. Casa Bö te espera.',
-    'cta.vrbo':'Ver en Vrbo',
-    'pool.blurb':'Una piscina espectacular en un jardín tropical exuberante, cuya superficie luminosa se refleja en la sala de estar. El concepto de vida abierta de Casa Bö disuelve la frontera entre arquitectura y naturaleza.',
-    'bed.blurb':'Cada habitación es un refugio privado con ropa de cama premium, muebles balineses artesanales y detalles cuidados. El servicio de limpieza diario garantiza una estancia siempre impecable.',
-    'kitchen.blurb':'Espectacular y completamente equipada, la cocina abierta se integra con las áreas de estar y exterior, ideal para celebraciones en grupo, desayunos al aire libre y todo lo que imagines.',
-    'living.blurb':'Cada pieza es artesanal, los muebles balineses aportan calidez y alma a cada rincón. El espacio fusionado interior/exterior te invita a vivir plena y bellamente, sin límites.',
-  },
-  fr: {
-    'nav.villa':'Inicio','nav.gallery':'L\'Espace','nav.occasions':'Occasions',
-    'nav.services':'Services','nav.location':'Emplacement','nav.book':'Réserver','nav.blog':'Blog',
-    'hero.eyebrow':'Playa Langosta · Guanacaste · Costa Rica',
-    'hero.welcome':'Bienvenue à','hero.tagline':'Un refuge de luxe, à deux pas de la mer.',
-    'hero.pill':'Votre Paradis<br>Privé',
-    'ticker.t1':'Vie en Plein Air','ticker.t2':'Piscine Privée',
-    'ticker.t3':'4 min de Tamarindo','ticker.t4':'5.0 Étoiles',
-    'intro.heading':'Un sanctuaire de vie <em>intérieure–extérieure</em>',
-    'chips.bed':'Chambres','chips.bath':'Salles de bain','chips.guests':'Hôtes',
-    'chips.poolval':'Piscine','chips.pool':'Privée',
-    'intro.p1':'Bienvenue à Casa Bö, une location de vacances de luxe à quelques pas de Playa Langosta et à quatre minutes du célèbre village de surf de Tamarindo, avec ses bars animés, ses restaurants raffinés, ses boutiques, ses spas et sa vie nocturne légendaire.',
-    'intro.p2':'Le concept de vie ouverte de Casa Bö est une invitation à se reconnecter avec la nature tout en profitant de tout le confort d\'une maison de luxe. L\'espace intérieur/extérieur fusionné comprend une cuisine ouverte spectaculaire, des meubles balinais personnalisés et un salon qui reflète la sérénité d\'une piscine turquoise dans un luxuriant jardin tropical.',
-    'intro.quote':'"Esthétique 10/10, pur bonheur. Beau design, paisible, extrêmement propre. Ils ont pensé à tout."',
-    'intro.cite':'Deanna M., Hôte Vérifiée · 5 Étoiles',
-    'cta.book':'Réserver sur Airbnb','cta.see':'Voir l\'Espace',
-    'gallery.pool':'Piscine Privée','gallery.living':'Salon','gallery.interior':'Intérieur',
-    'gallery.outdoor':'Espace Extérieur','gallery.kitchen':'Cuisine',
-    'features.title':'Espace',
-    'feat.1.name':'Concept de Vie Ouverte','feat.1.desc':'Un espace intérieur et extérieur parfaitement fusionné qui efface la frontière entre l\'architecture et la nature.',
-    'feat.2.name':'Piscine Privée Turquoise','feat.2.desc':'Une piscine spectaculaire dans un jardin tropical luxuriant, dont la surface lumineuse se reflète dans le salon.',
-    'feat.3.name':'Mobilier Balinais sur Mesure','feat.3.desc':'Chaque pièce est artisanale. Le mobilier balinais apporte chaleur et âme à chaque recoin.',
-    'feat.4.name':'Cuisine Ouverte','feat.4.desc':'Spectaculaire et entièrement équipée, en continuité avec les espaces de vie et extérieurs, idéale pour les célébrations en groupe.',
-    'feat.5.name':'Ménage Quotidien','feat.5.desc':'4 heures de ménage professionnel incluses chaque jour (sauf week-ends et jours fériés).',
-    'feat.6.name':'À Deux Pas de la Plage','feat.6.desc':'Playa Langosta à votre porte. Le surf, la gastronomie et la vie nocturne de Tamarindo à seulement quatre minutes.',
-    'am.label':'Équipements','am.title':'Tout compris','am.ac':'Climatisation','am.pool':'Piscine Privée',
-    'am.kitchen':'Cuisine Complète','am.terrace':'Terrasse et Balcon','am.parking':'Parking Gratuit',
-    'am.child':'Adapté aux Enfants','am.bbq':'Barbecue Extérieur','am.beach':'Accès à la Plage',
-    'am.garden':'Jardin Tropical','am.laundry':'Buanderie','am.workspace':'Espace de Travail',
-    'am.guests':'Jusqu\'à 8 Hôtes','am.linens':'Linge de Maison Premium','am.concierge':'Services de Conciergerie',
-    'bed.label':'Où Vous','bed.em_word':'Dormirez','bed.sublabel':'Trois chambres · Quatre salles de bain','bed.sublabel':'Trois chambres · Quatre salles de bain','bed.title':'Trois chambres,','bed.em':'un rêve',
-    'bed.1.name':'Suite Principale','bed.1.spec':'1 lit King · Salle de bain privative',
-    'bed.2.name':'Chambre Deux','bed.2.spec':'1 lit Queen · Salle de bain privative',
-    'bed.3.name':'Chambre Trois','bed.3.spec':'2 lits Queen · 2 lits simples',
-    'kitchen.label':'La','kitchen.em_word':'Cuisine','kitchen.title':'Ouverte, lumineuse','kitchen.em':'entièrement équipée',
-    'kitchen.1.name':'Cuisine Ouverte','kitchen.1.spec':'Entièrement équipée · Intégrée au salon',
-    'kitchen.2.name':'Salle à Manger','kitchen.2.spec':'8 couverts · Repas intérieur et extérieur',
-    'kitchen.3.name':'Électroménager Premium','kitchen.3.spec':'Machine à expresso · Batterie de cuisine',
-    'living.label':'Le','living.em_word':'Salon','living.title':'Là où la nature','living.em':'où la nature entre',
-    'living.1.name':'Espace de Vie Ouvert','living.1.spec':'Mobilier balinais · Fluidité intérieur-extérieur',
-    'living.2.name':'Salon et Terrasse','living.2.spec':'Smart TV · Vue sur le jardin · Assises extérieures',
-    'living.3.name':'Détails Artisanaux','living.3.spec':'Sculptures à la main · Textiles tropicaux',
-    'pool.label':'Piscine et Extérieur','pool.sublabel':'Piscine et Extérieur','pool.title':'Votre oasis','pool.em':'privée',
-    'pool.1.name':'Piscine Turquoise','pool.1.spec':'Privée · Chauffée · Entourée d\'un jardin tropical',
-    'pool.2.name':'Feu de Camp','pool.2.spec':'Au bord de la piscine · Idéal pour les soirées',
-    'pool.3.name':'Barbecue Extérieur','pool.3.spec':'Grill complet · Repas en plein air · Lounge jardin',
-    'occ.label':'Idéal Pour','occ.title':'Célébrez chaque','occ.em':'instant',
-    'occ.1.tag':'Cérémonie et Réception','occ.1.name':'Mariages Intimes',
-    'occ.2.tag':'Romance et Évasion','occ.2.name':'Lune de Miel',
-    'occ.3.tag':'Multi-Générationnel','occ.3.name':'Fêtes en Famille',
-    'occ.4.tag':'Groupes et Escapades','occ.4.name':'Escapades entre Amis',
-    'svc.label':'Personnel et Services','svc.title':'Personnel et Services',
-    'svc.1.name':'Ménage','svc.1.desc':'Inclus, 4 heures par jour (sauf week-ends et jours fériés)',
-    'svc.2.name':'Chef Privé','svc.2.desc':'Sur demande, menus élaborés dans votre cuisine ouverte',
-    'svc.3.name':'Ravitaillement','svc.3.desc':'Arrivez à une cuisine entièrement approvisionnée avec épicerie, vin et l\'essentiel',
-    'svc.4.name':'Transferts Aéroport','svc.4.desc':'Transferts privés depuis LIR · Liberia (~1,5 h) ou SJO · San José (~4,5 h)',
-    'svc.5.name':'Conciergerie','svc.5.desc':'Surf, canopée, faune et tours en bateau. Tamarindo est votre porte d\'entrée sur le Guanacaste',
-    'svc.aside.title':'Un séjour sans compromis',
-    'svc.aside.p1':'Casa Bö est également disponible en appartement indépendant pour jusqu\'à quatre hôtes, offrant le même luxe balinais à une échelle plus intime.',
-    'svc.aside.p2':'Toutes les demandes spéciales sont les bienvenues. Notre équipe s\'occupe de tout pour que vous n\'ayez qu\'à arriver et souffler.',
-    'ci.in':'Arrivée','ci.in.val':'À partir de 16h00','ci.out':'Départ','ci.out.val':'Avant 10h00','ci.age':'Âge min.',
-    'rev.label':'Avis des Hôtes','rev.title':'Écrit avec','rev.em':'émerveillement',
-    'rev.reviews':'avis','rev.pct':'100% cinq étoiles',
-    'rev.cats':'Propreté · Exactitude · Arrivée · Communication · Emplacement · Rapport qualité-prix',
-    'rev.gf':'Favori des Hôtes','rev.gfsub':'Top 1% des logements',
-    'rev.1':'"Magnifique, tropical et accueillant. Le quartier est rempli de merveilleux restaurants accessibles à pied ou en voiturette de golf. Casa Bö est un incontournable."',
-    'rev.2':'"Esthétique 10/10, pur bonheur. Beau design, paisible, extrêmement propre. Tout ce qu\'il nous fallait et plus. Ils ont pensé à tout."',
-    'rev.3':'"La décoration est époustouflante, unique de la plus belle façon. L\'hôte a répondu à chaque question. Comme avoir notre propre service de conciergerie."',
-    'rev.3.who':'Hôte Vérifié',
-    'loc.label':'Emplacement','loc.title':'Au cœur du',
-    'loc.p':'Playa Langosta offre la tranquillité d\'une escapade balnéaire privée avec toute l\'énergie de Tamarindo à quelques minutes. Surfez. Explorez. Retrouvez la sérénité.',
-    'loc.d1':'Plage de Playa Langosta','loc.d1v':'À quelques pas',
-    'loc.d2':'Plage et Village de Tamarindo','loc.d2v':'4 min en voiture',
-    'loc.d3v':'~1.5 heure','loc.d4v':'~4.5 heures',
-    'loc.d5':'Restaurants et Bars','loc.d5v':'À pied',
-    'cta.eyebrow':'Réservez Votre Séjour','cta.h2a':'Votre','cta.h2b':'évasion','cta.h2c':'vous attend',
-    'cta.sub':'À quelques pas du Pacifique. Ancré dans le luxe. Entouré de nature. Casa Bö est prêt à vous accueillir.',
-    'cta.vrbo':'Voir sur Vrbo',
-    'pool.blurb':'Une piscine spectaculaire dans un jardin tropical luxuriant, dont la surface lumineuse se reflète dans le salon. Le concept de vie ouverte de Casa Bö efface la frontière entre architecture et nature.',
-    'bed.blurb':'Chaque chambre est un refuge privé avec du linge de maison premium, un mobilier balinais artisanal et des détails soignés. Le ménage quotidien garantit un séjour toujours impeccable.',
-    'kitchen.blurb':'Spectaculaire et entièrement équipée, la cuisine ouverte s\'intègre aux espaces de vie et extérieurs, idéale pour les célébrations en groupe, les petits-déjeuners en plein air et tout le reste.',
-    'living.blurb':'Chaque pièce est artisanale, le mobilier balinais apporte chaleur et âme à chaque recoin. L\'espace intérieur/extérieur fusionné vous invite à vivre pleinement, magnifiquement, sans frontières.',
-  }
-};
-
-let currentLang = 'en';
-
-function setLang(lang) {
-  try{localStorage.setItem('cb-lang',lang);}catch(e){}
-  currentLang = lang;
-  document.documentElement.lang = lang;
-
-  // Update all data-i18n elements (HTML + SVG tspan)
-  document.querySelectorAll('[data-i18n]').forEach(el => {
-    const key = el.getAttribute('data-i18n');
-    if (T[lang][key] !== undefined) {
-      // SVG text elements use textContent, not innerHTML
-      if (el.namespaceURI === 'http://www.w3.org/2000/svg') {
-        el.textContent = T[lang][key].toUpperCase();
-      } else {
-        el.innerHTML = T[lang][key];
-      }
-    }
-  });
-
-  // Update lang buttons
-  document.querySelectorAll('.lang-btn').forEach(btn => {
-    btn.classList.toggle('active', btn.textContent === lang.toUpperCase());
-  });
-}
+let currentLang=document.documentElement.lang||'en';
 
 /* CURSOR */
 const cur=document.getElementById('cursor'),ring=document.getElementById('cursor-ring');
@@ -1141,11 +861,6 @@ document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',
   if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth'});}
 }));
 
-/* LANGUAGE PERSISTENCE */
-document.addEventListener('DOMContentLoaded',()=>{
-  try{const l=localStorage.getItem('cb-lang');if(l&&l!=='en'&&T[l])setLang(l);}catch(e){}
-});
-
 /* BOOK NOW: letters turn red one by one under the cursor */
 (function(){
   const el=document.querySelector('.nav-cta');
@@ -1163,11 +878,11 @@ document.addEventListener('DOMContentLoaded',()=>{
 </script>
 <!-- LANG SWITCHER, fixed right side -->
 <div class="lang-switcher">
-  <button class="lang-btn active" aria-label="English" onclick="setLang('en')">EN</button>
+  <a class="lang-btn active" href="/" hreflang="en" lang="en" aria-label="English">EN</a>
   <div class="lang-sep"></div>
-  <button class="lang-btn" aria-label="Español" onclick="setLang('es')">ES</button>
+  <a class="lang-btn" href="/es/" hreflang="es" lang="es" aria-label="Español">ES</a>
   <div class="lang-sep"></div>
-  <button class="lang-btn" aria-label="Français" onclick="setLang('fr')">FR</button>
+  <a class="lang-btn" href="/fr/" hreflang="fr" lang="fr" aria-label="Français">FR</a>
 </div>
 
 </body>

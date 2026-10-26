@@ -7,6 +7,10 @@
 <!-- seo:start -->
 <meta name="description" content="Request dates for Casa Bö in Playa Langosta, Costa Rica. Sleeps up to 8. Check-in 4 pm, check-out 10 am. Reply within 24 hours, or book on Airbnb or Vrbo.">
 <link rel="canonical" href="https://casabotamarindo.com/book.html">
+<link rel="alternate" hreflang="en" href="https://casabotamarindo.com/book.html">
+<link rel="alternate" hreflang="es" href="https://casabotamarindo.com/es/book.html">
+<link rel="alternate" hreflang="fr" href="https://casabotamarindo.com/fr/book.html">
+<link rel="alternate" hreflang="x-default" href="https://casabotamarindo.com/book.html">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -65,7 +69,7 @@ nav{position:fixed;top:20px;left:50%;transform:translateX(-50%);z-index:300;widt
 .lang-switcher{position:fixed;right:20px;top:50%;transform:translateY(-50%);z-index:400;display:flex;flex-direction:column;align-items:center;gap:0;background:var(--ink);border-radius:100px;padding:6px 0;box-shadow:0 4px 20px rgba(26,24,20,.18);}
 .lang-btn{background:none;border:none;font-family:var(--sans);font-size:.6rem;font-weight:500;letter-spacing:.1em;color:rgba(250,248,244,.4);cursor:pointer;padding:8px 12px;line-height:1;transition:color .2s;width:100%;}
 .lang-btn:hover{color:rgba(250,248,244,.85);}
-.lang-btn.active{color:var(--teal);}
+.lang-btn.active{color:var(--teal);}a.lang-btn{display:block;text-decoration:none;text-align:center;}
 .lang-sep{width:20px;height:1px;background:rgba(255,255,255,.08);}
 
 /* PAGE HERO */
@@ -272,11 +276,11 @@ nav{position:fixed;top:20px;left:50%;transform:translateX(-50%);z-index:300;widt
 
 <!-- LANG SWITCHER -->
 <div class="lang-switcher">
-  <button class="lang-btn active" aria-label="English" onclick="setLang('en')">EN</button>
+  <a class="lang-btn active" href="/book.html" hreflang="en" lang="en" aria-label="English">EN</a>
   <div class="lang-sep"></div>
-  <button class="lang-btn" aria-label="Español" onclick="setLang('es')">ES</button>
+  <a class="lang-btn" href="/es/book.html" hreflang="es" lang="es" aria-label="Español">ES</a>
   <div class="lang-sep"></div>
-  <button class="lang-btn" aria-label="Français" onclick="setLang('fr')">FR</button>
+  <a class="lang-btn" href="/fr/book.html" hreflang="fr" lang="fr" aria-label="Français">FR</a>
 </div>
 
 <script>
@@ -343,15 +347,6 @@ document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',
   const t=document.querySelector(href);
   if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth'});}
 }));
-
-/* LANGUAGE SWITCHER (page text is English only; choice is remembered across pages) */
-function setLang(lang){
-  try{localStorage.setItem('cb-lang',lang);}catch(e){}
-  document.querySelectorAll('.lang-btn').forEach(b=>b.classList.toggle('active',b.textContent===lang.toUpperCase()));
-}
-document.addEventListener('DOMContentLoaded',()=>{
-  try{const l=localStorage.getItem('cb-lang');if(l)setLang(l);}catch(e){}
-});
 
 /* BOOK NOW: letters turn red one by one under the cursor */
 (function(){

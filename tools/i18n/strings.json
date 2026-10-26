@@ -1,0 +1,738 @@
+{
+ "Steps from the beach": {
+  "fr": "À deux pas de la plage",
+  "es": "A pasos de la playa"
+ },
+ "★ · 93 Reviews": {
+  "fr": "★ · 93 Avis",
+  "es": "★ · 93 Reseñas"
+ },
+ "Mike M. · March 2025": {
+  "fr": "Mike M. · Mars 2025",
+  "es": "Mike M. · Marzo 2025"
+ },
+ "Deanna M. · January 2025": {
+  "fr": "Deanna M. · Janvier 2025",
+  "es": "Deanna M. · Enero 2025"
+ },
+ "Playa Langosta · Tamarindo · Guanacaste · Costa Rica": {
+  "fr": "Playa Langosta · Tamarindo · Guanacaste · Costa Rica",
+  "es": "Playa Langosta · Tamarindo · Guanacaste · Costa Rica"
+ },
+ "Open menu": {
+  "fr": "Ouvrir le menu",
+  "es": "Abrir el menú"
+ },
+ "Casa Bö logo": {
+  "fr": "Logo Casa Bö",
+  "es": "Logo de Casa Bö"
+ },
+ "Casa Bö at sunset": {
+  "fr": "Casa Bö au coucher du soleil",
+  "es": "Casa Bö al atardecer"
+ },
+ "Pool and lounge deck": {
+  "fr": "Piscine et terrasse salon",
+  "es": "Piscina y terraza lounge"
+ },
+ "Dining pavilion": {
+  "fr": "Pavillon repas",
+  "es": "Pabellón comedor"
+ },
+ "Living room of Casa Bö with Balinese furniture": {
+  "fr": "Salon de Casa Bö avec mobilier balinais",
+  "es": "Sala de Casa Bö con muebles balineses"
+ },
+ "Bedroom at Casa Bö, Playa Langosta": {
+  "fr": "Chambre de Casa Bö, Playa Langosta",
+  "es": "Habitación de Casa Bö, Playa Langosta"
+ },
+ "Bathroom at Casa Bö": {
+  "fr": "Salle de bain de Casa Bö",
+  "es": "Baño de Casa Bö"
+ },
+ "Pool at night": {
+  "fr": "Piscine de nuit",
+  "es": "Piscina de noche"
+ },
+ "Previous": {
+  "fr": "Précédent",
+  "es": "Anterior"
+ },
+ "Next": {
+  "fr": "Suivant",
+  "es": "Siguiente"
+ },
+ "Casa Bö": {
+  "fr": "Casa Bö",
+  "es": "Casa Bö"
+ },
+ "English": {
+  "fr": "English",
+  "es": "English"
+ },
+ "Español": {
+  "fr": "Español",
+  "es": "Español"
+ },
+ "Français": {
+  "fr": "Français",
+  "es": "Français"
+ },
+ "Luxury vacation villa with a private pool, open-plan kitchen and Balinese furniture, steps from Playa Langosta and four minutes from Tamarindo, Costa Rica.": {
+  "fr": "Villa de luxe avec piscine privée, cuisine ouverte et mobilier balinais, à deux pas de Playa Langosta et à quatre minutes de Tamarindo, Costa Rica.",
+  "es": "Villa de lujo con piscina privada, cocina abierta y muebles balineses, a pasos de Playa Langosta y a cuatro minutos de Tamarindo, Costa Rica."
+ },
+ "Private pool": {
+  "fr": "Piscine privée",
+  "es": "Piscina privada"
+ },
+ "Air conditioning": {
+  "fr": "Climatisation",
+  "es": "Aire acondicionado"
+ },
+ "Wi-Fi": {
+  "fr": "Wi-Fi",
+  "es": "Wi-Fi"
+ },
+ "Free parking": {
+  "fr": "Parking gratuit",
+  "es": "Estacionamiento gratuito"
+ },
+ "Fully equipped kitchen": {
+  "fr": "Cuisine entièrement équipée",
+  "es": "Cocina totalmente equipada"
+ },
+ "Daily housekeeping": {
+  "fr": "Ménage quotidien",
+  "es": "Limpieza diaria"
+ },
+ "Outdoor shower": {
+  "fr": "Douche extérieure",
+  "es": "Ducha exterior"
+ },
+ "Wi-Fi 203 Mbps": {
+  "fr": "Wi-Fi 203 Mbps",
+  "es": "Wi-Fi 203 Mbps"
+ },
+ "Smart TV": {
+  "fr": "Smart TV",
+  "es": "Smart TV"
+ },
+ "See more": {
+  "fr": "Voir plus",
+  "es": "Ver más"
+ },
+ "Page sections": {
+  "fr": "Sections de la page",
+  "es": "Secciones de la página"
+ },
+ "Hammock by the pool": {
+  "fr": "Hamac au bord de la piscine",
+  "es": "Hamaca junto a la piscina"
+ },
+ "Outdoor lounge by the pool": {
+  "fr": "Salon extérieur au bord de la piscine",
+  "es": "Zona lounge exterior junto a la piscina"
+ },
+ "Master Suite bed": {
+  "fr": "Lit de la suite principale",
+  "es": "Cama de la suite principal"
+ },
+ "Master Suite bed detail": {
+  "fr": "Détail du lit de la suite principale",
+  "es": "Detalle de la cama de la suite principal"
+ },
+ "Master Suite en-suite bathroom": {
+  "fr": "Salle de bain privative de la suite principale",
+  "es": "Baño en suite de la suite principal"
+ },
+ "Previous photo": {
+  "fr": "Photo précédente",
+  "es": "Foto anterior"
+ },
+ "Next photo": {
+  "fr": "Photo suivante",
+  "es": "Foto siguiente"
+ },
+ "Slide 1": {
+  "fr": "Diapositive 1",
+  "es": "Diapositiva 1"
+ },
+ "Slide 2": {
+  "fr": "Diapositive 2",
+  "es": "Diapositiva 2"
+ },
+ "Slide 3": {
+  "fr": "Diapositive 3",
+  "es": "Diapositiva 3"
+ },
+ "Bedroom Two": {
+  "fr": "Chambre Deux",
+  "es": "Habitación Dos"
+ },
+ "Bedroom Two headboard detail": {
+  "fr": "Détail de la tête de lit, chambre deux",
+  "es": "Detalle del cabecero, habitación dos"
+ },
+ "Bedroom Two en-suite bathroom": {
+  "fr": "Salle de bain privative de la chambre deux",
+  "es": "Baño en suite de la habitación dos"
+ },
+ "Bedroom Two view of the pool through the sliding doors": {
+  "fr": "Chambre deux avec vue sur la piscine à travers les baies coulissantes",
+  "es": "Habitación dos con vista a la piscina a través de las puertas corredizas"
+ },
+ "Slide 4": {
+  "fr": "Diapositive 4",
+  "es": "Diapositiva 4"
+ },
+ "Bedroom Three twin beds": {
+  "fr": "Chambre trois, lits jumeaux",
+  "es": "Habitación tres, camas individuales"
+ },
+ "Bedroom Three bunk beds": {
+  "fr": "Chambre trois, lits superposés",
+  "es": "Habitación tres, literas"
+ },
+ "Bedroom Three en-suite bathroom": {
+  "fr": "Salle de bain privative de la chambre trois",
+  "es": "Baño en suite de la habitación tres"
+ },
+ "Casa Bö open-plan kitchen": {
+  "fr": "Cuisine ouverte de Casa Bö",
+  "es": "Cocina abierta de Casa Bö"
+ },
+ "Dining table and living area": {
+  "fr": "Table à manger et espace de vie",
+  "es": "Mesa de comedor y sala de estar"
+ },
+ "Dining area opening onto the garden": {
+  "fr": "Salle à manger ouverte sur le jardin",
+  "es": "Comedor abierto al jardín"
+ },
+ "Kitchen island with pool view": {
+  "fr": "Îlot de cuisine avec vue sur la piscine",
+  "es": "Isla de cocina con vista a la piscina"
+ },
+ "Casa Bö living room": {
+  "fr": "Salon de Casa Bö",
+  "es": "Sala de Casa Bö"
+ },
+ "Living room and dining area": {
+  "fr": "Salon et salle à manger",
+  "es": "Sala de estar y comedor"
+ },
+ "Living room seating and television wall": {
+  "fr": "Coin salon et mur télévision",
+  "es": "Zona de asientos y pared de televisión"
+ },
+ "Close": {
+  "fr": "Fermer",
+  "es": "Cerrar"
+ },
+ "Home": {
+  "fr": "Accueil",
+  "es": "Inicio"
+ },
+ "The Space": {
+  "fr": "L'Espace",
+  "es": "El Espacio"
+ },
+ "Services": {
+  "fr": "Services",
+  "es": "Servicios"
+ },
+ "Location": {
+  "fr": "Emplacement",
+  "es": "Ubicación"
+ },
+ "Blog": {
+  "fr": "Blog",
+  "es": "Blog"
+ },
+ "Book Now": {
+  "fr": "Réserver",
+  "es": "Reservar"
+ },
+ "Casa Bö · Playa Langosta": {
+  "fr": "Casa Bö · Playa Langosta",
+  "es": "Casa Bö · Playa Langosta"
+ },
+ "Staff &amp; <em>Services</em>": {
+  "fr": "Personnel &amp; <em>Services</em>",
+  "es": "Personal y <em>Servicios</em>"
+ },
+ "Our team handles everything, from daily housekeeping to tours and transfers, so you can simply arrive and exhale.": {
+  "fr": "Notre équipe s'occupe de tout, du ménage quotidien aux excursions et aux transferts, pour que vous n'ayez plus qu'à arriver et respirer.",
+  "es": "Nuestro equipo se encarga de todo, desde la limpieza diaria hasta los tours y traslados, para que usted solo tenga que llegar y respirar."
+ },
+ "A dedicated team looks after the villa and its guests. Some services are included, others can be arranged on request before or during your stay.": {
+  "fr": "Une équipe dédiée prend soin de la villa et de ses hôtes. Certains services sont inclus, d'autres peuvent être organisés sur demande avant ou pendant votre séjour.",
+  "es": "Un equipo dedicado cuida de la villa y de sus huéspedes. Algunos servicios están incluidos y otros pueden organizarse bajo petición antes o durante su estancia."
+ },
+ "Housekeeping": {
+  "fr": "Ménage",
+  "es": "Limpieza"
+ },
+ "Included, 4 hours daily (except weekends &amp; statutory holidays)": {
+  "fr": "Inclus, 4 heures par jour (sauf week-ends et jours fériés)",
+  "es": "Incluida, 4 horas diarias (excepto fines de semana y feriados)"
+ },
+ "Concierge": {
+  "fr": "Conciergerie",
+  "es": "Conserjería"
+ },
+ "Private chef, activities such as scuba diving, surfing, canopy, wildlife and boat tours. Tamarindo is your gateway to Guanacaste.": {
+  "fr": "Chef privé, activités comme la plongée, le surf, la tyrolienne, les visites de la faune et les sorties en bateau. Tamarindo est votre porte d'entrée vers le Guanacaste.",
+  "es": "Chef privado, actividades como buceo, surf, canopy, tours de vida silvestre y paseos en bote. Tamarindo es su puerta de entrada a Guanacaste."
+ },
+ "Your <em>Concierge</em>": {
+  "fr": "Votre <em>conciergerie</em>",
+  "es": "Su <em>conserjería</em>"
+ },
+ "Everything we can arrange for you right at the villa, from the first grocery run to a private dinner. These services come at an additional cost.": {
+  "fr": "Tout ce que nous pouvons organiser pour vous à la villa, des premières courses à un dîner privé. Ces services sont facturés en supplément.",
+  "es": "Todo lo que podemos organizar para usted en la villa, desde las primeras compras hasta una cena privada. Estos servicios tienen un costo adicional."
+ },
+ "Grocery Pre-Stocking": {
+  "fr": "Courses avant l'arrivée",
+  "es": "Compras antes de su llegada"
+ },
+ "Arrive to a fully stocked kitchen with groceries, wine and essentials ready.": {
+  "fr": "Arrivez dans une cuisine garnie : courses, vin et produits de base vous attendent.",
+  "es": "Llegue a una cocina abastecida, con compras, vino y productos esenciales listos."
+ },
+ "Golf Cart Rental": {
+  "fr": "Location de voiturette de golf",
+  "es": "Alquiler de carrito de golf"
+ },
+ "Rent a golf cart for easy trips to the beach, the restaurants and Tamarindo town.": {
+  "fr": "Louez une voiturette de golf pour aller facilement à la plage, aux restaurants et au centre de Tamarindo.",
+  "es": "Alquile un carrito de golf para ir fácilmente a la playa, a los restaurantes y al centro de Tamarindo."
+ },
+ "Airport Transfers": {
+  "fr": "Transferts aéroport",
+  "es": "Traslados al aeropuerto"
+ },
+ "Private transfers from LIR · Liberia (~1.5 hrs) or SJO · San José (~4.5 hrs).": {
+  "fr": "Transferts privés depuis LIR · Liberia (~1 h 30) ou SJO · San José (~4 h 30).",
+  "es": "Traslados privados desde LIR · Liberia (~1,5 h) o SJO · San José (~4,5 h)."
+ },
+ "Massage": {
+  "fr": "Massage",
+  "es": "Masaje"
+ },
+ "In-villa massages, by the pool or in the garden.": {
+  "fr": "Massages à la villa, au bord de la piscine ou dans le jardin.",
+  "es": "Masajes en la villa, junto a la piscina o en el jardín."
+ },
+ "Scuba Pool Initiation": {
+  "fr": "Initiation à la plongée en piscine",
+  "es": "Iniciación al buceo en piscina"
+ },
+ "A first taste of scuba diving in the calm of the villa pool, led by an instructor, before you head out to the ocean.": {
+  "fr": "Un premier aperçu de la plongée dans le calme de la piscine de la villa, avec un moniteur, avant de partir en mer.",
+  "es": "Una primera experiencia de buceo en la tranquilidad de la piscina de la villa, con un instructor, antes de salir al océano."
+ },
+ "Pilates &amp; Yoga": {
+  "fr": "Pilates &amp; Yoga",
+  "es": "Pilates y Yoga"
+ },
+ "Private classes at the villa, by the pool or in the garden.": {
+  "fr": "Cours privés à la villa, au bord de la piscine ou dans le jardin.",
+  "es": "Clases privadas en la villa, junto a la piscina o en el jardín."
+ },
+ "Private Chef": {
+  "fr": "Chef privé",
+  "es": "Chef privado"
+ },
+ "Available on request, with curated menus prepared in your open-plan kitchen.": {
+  "fr": "Disponible sur demande, avec des menus soignés préparés dans votre cuisine ouverte.",
+  "es": "Disponible bajo petición, con menús cuidados preparados en su cocina abierta."
+ },
+ "Breakfast &amp; Snacks": {
+  "fr": "Petit-déjeuner &amp; collations",
+  "es": "Desayuno y bocadillos"
+ },
+ "Simple breakfast and snack options, from fresh fruit to light bites, served by the pool or at your table.": {
+  "fr": "Petit-déjeuner et collations simples, des fruits frais aux petites bouchées, servis au bord de la piscine ou à votre table.",
+  "es": "Desayuno y bocadillos sencillos, desde fruta fresca hasta bocados ligeros, servidos junto a la piscina o en su mesa."
+ },
+ "Around <em>Tamarindo</em>": {
+  "fr": "Autour de <em>Tamarindo</em>",
+  "es": "Alrededor de <em>Tamarindo</em>"
+ },
+ "Tell our concierge what you feel like doing and we'll book it and arrange the transport. Here is some of what's on offer, each priced separately.": {
+  "fr": "Dites à notre conciergerie ce dont vous avez envie : nous réservons et organisons le transport. Voici un aperçu de ce qui est proposé, chaque activité étant facturée séparément.",
+  "es": "Cuéntele a nuestra conserjería qué le apetece hacer y nosotros lo reservamos y organizamos el transporte. Esta es una muestra de lo que se ofrece, cada actividad con su propio precio."
+ },
+ "Scuba Diving &amp; Snorkeling": {
+  "fr": "Plongée &amp; snorkeling",
+  "es": "Buceo y snorkel"
+ },
+ "Guided dives and snorkeling trips at Las Catalinas, for first-timers and certified divers.": {
+  "fr": "Plongées guidées et sorties snorkeling à Las Catalinas, pour débutants comme pour plongeurs confirmés.",
+  "es": "Inmersiones guiadas y salidas de snorkel en Las Catalinas, para principiantes y buzos certificados."
+ },
+ "Surf Lessons": {
+  "fr": "Cours de surf",
+  "es": "Clases de surf"
+ },
+ "Lessons for every level at Playa Langosta and Tamarindo.": {
+  "fr": "Cours pour tous les niveaux à Playa Langosta et Tamarindo.",
+  "es": "Clases para todos los niveles en Playa Langosta y Tamarindo."
+ },
+ "Sunset Catamaran Tour": {
+  "fr": "Catamaran au coucher du soleil",
+  "es": "Catamarán al atardecer"
+ },
+ "Sail the Pacific coast by catamaran and watch the sun go down from the water.": {
+  "fr": "Naviguez le long de la côte Pacifique en catamaran et regardez le soleil se coucher depuis l'eau.",
+  "es": "Navegue por la costa del Pacífico en catamarán y vea ponerse el sol desde el agua."
+ },
+ "Adventure Day": {
+  "fr": "Journée aventure",
+  "es": "Día de aventura"
+ },
+ "Full-day trips to national parks for wildlife, nature and scenery, with transport arranged.": {
+  "fr": "Excursions d'une journée dans les parcs nationaux pour la faune, la nature et les paysages, transport compris.",
+  "es": "Excursiones de día completo a parques nacionales para ver fauna, naturaleza y paisajes, con transporte incluido."
+ },
+ "Gyrocopter": {
+  "fr": "Gyrocoptère",
+  "es": "Girocóptero"
+ },
+ "See the coastline from above on a gyrocopter flight.": {
+  "fr": "Découvrez la côte vue du ciel lors d'un vol en gyrocoptère.",
+  "es": "Descubra la costa desde el aire en un vuelo en girocóptero."
+ },
+ "Sport Fishing": {
+  "fr": "Pêche sportive",
+  "es": "Pesca deportiva"
+ },
+ "Half-day and full-day charters with local captains.": {
+  "fr": "Sorties en mer d'une demi-journée ou d'une journée avec des capitaines locaux.",
+  "es": "Salidas de medio día o día completo con capitanes locales."
+ },
+ "Ziplining": {
+  "fr": "Tyrolienne",
+  "es": "Tirolesa"
+ },
+ "Fly through the treetops on zipline and hanging-bridge tours in the surrounding forest.": {
+  "fr": "Glissez au-dessus de la cime des arbres lors de circuits de tyroliennes et de ponts suspendus dans la forêt environnante.",
+  "es": "Deslícese sobre las copas de los árboles en recorridos de tirolesas y puentes colgantes en el bosque circundante."
+ },
+ "Contact us for more": {
+  "fr": "Contactez-nous pour en savoir plus",
+  "es": "Contáctenos para saber más"
+ },
+ "Looking for something that isn't listed? Tell us what you have in mind and we'll arrange it.": {
+  "fr": "Vous cherchez quelque chose qui n'est pas listé ? Dites-nous ce que vous avez en tête et nous nous en occupons.",
+  "es": "¿Busca algo que no está en la lista? Cuéntenos lo que tiene en mente y lo organizaremos."
+ },
+ "Contact Us": {
+  "fr": "Nous contacter",
+  "es": "Contáctenos"
+ },
+ "Availability and rates vary by season. Contact us before your stay and we'll put together a plan that fits your group.": {
+  "fr": "Les disponibilités et les tarifs varient selon la saison. Contactez-nous avant votre séjour et nous élaborerons un programme adapté à votre groupe.",
+  "es": "La disponibilidad y las tarifas varían según la temporada. Contáctenos antes de su estancia y prepararemos un plan adecuado para su grupo."
+ },
+ "Ready to plan <em>your stay?</em>": {
+  "fr": "Prêt à planifier <em>votre séjour ?</em>",
+  "es": "¿Listo para planificar <em>su estancia?</em>"
+ },
+ "Send us your dates and anything you'd like arranged, and we'll reply within 24 hours.": {
+  "fr": "Envoyez-nous vos dates et tout ce que vous souhaitez organiser, nous vous répondons sous 24 heures.",
+  "es": "Envíenos sus fechas y todo lo que desee organizar, y le responderemos en 24 horas."
+ },
+ "Book Directly": {
+  "fr": "Réserver en direct",
+  "es": "Reservar directamente"
+ },
+ "See Amenities": {
+  "fr": "Voir les équipements",
+  "es": "Ver comodidades"
+ },
+ "In-villa massage by the pool": {
+  "fr": "Massage à la villa au bord de la piscine",
+  "es": "Masaje en la villa junto a la piscina"
+ },
+ "Scuba pool initiation in the villa pool": {
+  "fr": "Initiation à la plongée dans la piscine de la villa",
+  "es": "Iniciación al buceo en la piscina de la villa"
+ },
+ "Yoga at the villa": {
+  "fr": "Yoga à la villa",
+  "es": "Yoga en la villa"
+ },
+ "Floating breakfast and snack tray in the villa pool": {
+  "fr": "Plateau flottant de petit-déjeuner et de collations dans la piscine de la villa",
+  "es": "Bandeja flotante de desayuno y bocadillos en la piscina de la villa"
+ },
+ "Divers with a manta ray": {
+  "fr": "Plongeurs avec une raie manta",
+  "es": "Buzos con una manta raya"
+ },
+ "Staff & Services": {
+  "fr": "Personnel & Services",
+  "es": "Personal y Servicios"
+ },
+ "Our <em>Location</em>": {
+  "fr": "Notre <em>emplacement</em>",
+  "es": "Nuestra <em>ubicación</em>"
+ },
+ "A private beach escape in Playa Langosta, with the energy of Tamarindo just minutes away.": {
+  "fr": "Une escapade balnéaire privée à Playa Langosta, avec l'énergie de Tamarindo à quelques minutes.",
+  "es": "Un refugio privado junto a la playa en Playa Langosta, con la energía de Tamarindo a pocos minutos."
+ },
+ "In the heart of <em>Guanacaste</em>": {
+  "fr": "Au cœur du <em>Guanacaste</em>",
+  "es": "En el corazón de <em>Guanacaste</em>"
+ },
+ "Playa Langosta offers the tranquility of a private beach escape with all the energy of Tamarindo just minutes away. Surf. Explore. Return to stillness.": {
+  "fr": "Playa Langosta offre la tranquillité d'une escapade balnéaire privée, avec toute l'énergie de Tamarindo à quelques minutes. Surfer. Explorer. Retrouver le calme.",
+  "es": "Playa Langosta ofrece la tranquilidad de un refugio privado junto a la playa, con toda la energía de Tamarindo a pocos minutos. Surfear. Explorar. Volver a la calma."
+ },
+ "Playa Langosta Beach": {
+  "fr": "Plage de Playa Langosta",
+  "es": "Playa Langosta"
+ },
+ "Steps away": {
+  "fr": "À deux pas",
+  "es": "A pasos"
+ },
+ "Tamarindo Beach &amp; Town": {
+  "fr": "Plage et centre de Tamarindo",
+  "es": "Playa y centro de Tamarindo"
+ },
+ "4 min drive": {
+  "fr": "4 min en voiture",
+  "es": "4 min en auto"
+ },
+ "LIR · Liberia Airport": {
+  "fr": "LIR · Aéroport de Liberia",
+  "es": "LIR · Aeropuerto de Liberia"
+ },
+ "~1.5 hours": {
+  "fr": "~1 h 30",
+  "es": "~1,5 horas"
+ },
+ "SJO · San José Airport": {
+  "fr": "SJO · Aéroport de San José",
+  "es": "SJO · Aeropuerto de San José"
+ },
+ "~4.5 hours": {
+  "fr": "~4 h 30",
+  "es": "~4,5 horas"
+ },
+ "Restaurants &amp; Bars": {
+  "fr": "Restaurants &amp; bars",
+  "es": "Restaurantes y bares"
+ },
+ "Walking distance": {
+  "fr": "À distance de marche",
+  "es": "A poca distancia a pie"
+ },
+ "Open in Google Maps ↗": {
+  "fr": "Ouvrir dans Google Maps ↗",
+  "es": "Abrir en Google Maps ↗"
+ },
+ "Good to <em>know</em>": {
+  "fr": "Bon à <em>savoir</em>",
+  "es": "Bueno <em>saber</em>"
+ },
+ "How many guests does Casa Bö sleep?": {
+  "fr": "Combien de personnes Casa Bö peut-elle accueillir ?",
+  "es": "¿Cuántas personas pueden alojarse en Casa Bö?"
+ },
+ "Casa Bö sleeps up to 8 guests in 3 bedrooms, with a private pool, an open-plan kitchen and a living area.": {
+  "fr": "Casa Bö accueille jusqu'à 8 personnes dans 3 chambres, avec une piscine privée, une cuisine ouverte et un espace de vie.",
+  "es": "Casa Bö aloja hasta 8 personas en 3 habitaciones, con piscina privada, cocina abierta y sala de estar."
+ },
+ "How far is Casa Bö from the beach?": {
+  "fr": "À quelle distance de la plage se trouve Casa Bö ?",
+  "es": "¿A qué distancia de la playa está Casa Bö?"
+ },
+ "The villa is about 150 metres from Playa Langosta, a short walk. Tamarindo beach and town are a 4-minute drive away.": {
+  "fr": "La villa est à environ 150 mètres de Playa Langosta, à quelques pas. La plage et le centre de Tamarindo sont à 4 minutes en voiture.",
+  "es": "La villa está a unos 150 metros de Playa Langosta, a pocos pasos. La playa y el centro de Tamarindo están a 4 minutos en auto."
+ },
+ "How far is Casa Bö from Liberia airport (LIR)?": {
+  "fr": "À quelle distance de l'aéroport de Liberia (LIR) se trouve Casa Bö ?",
+  "es": "¿A qué distancia del aeropuerto de Liberia (LIR) está Casa Bö?"
+ },
+ "Liberia airport (LIR) is about 1.5 hours by road. San José airport (SJO) is about 4.5 hours.": {
+  "fr": "L'aéroport de Liberia (LIR) est à environ 1 h 30 par la route. L'aéroport de San José (SJO) est à environ 4 h 30.",
+  "es": "El aeropuerto de Liberia (LIR) está a aproximadamente 1,5 horas por carretera. El aeropuerto de San José (SJO) está a unas 4,5 horas."
+ },
+ "What are the check-in and check-out times?": {
+  "fr": "Quels sont les horaires d'arrivée et de départ ?",
+  "es": "¿Cuáles son los horarios de entrada y salida?"
+ },
+ "Check-in is from 4:00 pm and check-out is before 10:00 am.": {
+  "fr": "L'arrivée se fait à partir de 16 h et le départ avant 10 h.",
+  "es": "La entrada es a partir de las 16:00 y la salida antes de las 10:00."
+ },
+ "How many bathrooms does Casa Bö have?": {
+  "fr": "Combien de salles de bain compte Casa Bö ?",
+  "es": "¿Cuántos baños tiene Casa Bö?"
+ },
+ "Casa Bö has 4 bathrooms: three en-suite bathrooms, one for each bedroom, plus an outdoor shower.": {
+  "fr": "Casa Bö compte 4 salles de bain : trois salles de bain privatives, une par chambre, plus une douche extérieure.",
+  "es": "Casa Bö tiene 4 baños: tres baños en suite, uno por habitación, más una ducha exterior."
+ },
+ "Does Casa Bö have a private pool?": {
+  "fr": "Casa Bö a-t-elle une piscine privée ?",
+  "es": "¿Casa Bö tiene piscina privada?"
+ },
+ "Yes. The villa has its own private pool, along with air conditioning, Wi-Fi, free parking and a fully equipped kitchen.": {
+  "fr": "Oui. La villa dispose de sa propre piscine privée, ainsi que de la climatisation, du Wi-Fi, d'un parking gratuit et d'une cuisine entièrement équipée.",
+  "es": "Sí. La villa tiene su propia piscina privada, además de aire acondicionado, Wi-Fi, estacionamiento gratuito y una cocina totalmente equipada."
+ },
+ "Is housekeeping included?": {
+  "fr": "Le ménage est-il inclus ?",
+  "es": "¿Está incluida la limpieza?"
+ },
+ "Yes. Daily housekeeping is included in your stay.": {
+  "fr": "Oui. Le ménage quotidien est inclus dans votre séjour.",
+  "es": "Sí. La limpieza diaria está incluida en su estancia."
+ },
+ "Can I book a private chef or tours?": {
+  "fr": "Puis-je réserver un chef privé ou des excursions ?",
+  "es": "¿Puedo reservar un chef privado o tours?"
+ },
+ "Yes. Private chef, concierge and tours can be arranged for your stay. See the Services page for details.": {
+  "fr": "Oui. Un chef privé, la conciergerie et des excursions peuvent être organisés pour votre séjour. Consultez la page Services pour plus de détails.",
+  "es": "Sí. Se pueden organizar un chef privado, conserjería y tours para su estancia. Consulte la página de Servicios para más detalles."
+ },
+ "What languages does the host speak?": {
+  "fr": "Quelles langues parle l'hôte ?",
+  "es": "¿Qué idiomas habla el anfitrión?"
+ },
+ "English, Spanish and French.": {
+  "fr": "Anglais, espagnol et français.",
+  "es": "Inglés, español y francés."
+ },
+ "Aerial view of Casa Bö, 150m from the beach in Playa Langosta": {
+  "fr": "Vue aérienne de Casa Bö, à 150 m de la plage de Playa Langosta",
+  "es": "Vista aérea de Casa Bö, a 150 m de la playa en Playa Langosta"
+ },
+ "Casa Bö location": {
+  "fr": "Emplacement de Casa Bö",
+  "es": "Ubicación de Casa Bö"
+ },
+ "Book Your <em>Stay</em>": {
+  "fr": "Réservez votre <em>séjour</em>",
+  "es": "Reserve su <em>estancia</em>"
+ },
+ "Send us your dates directly and we'll get back to you within 24 hours with availability and a tailored quote — or book instantly through Airbnb or Vrbo.": {
+  "fr": "Envoyez-nous directement vos dates et nous vous répondons sous 24 heures avec les disponibilités et un devis sur mesure, ou réservez instantanément via Airbnb ou Vrbo.",
+  "es": "Envíenos sus fechas directamente y le responderemos en 24 horas con disponibilidad y una cotización a medida, o reserve al instante a través de Airbnb o Vrbo."
+ },
+ "Request to Book": {
+  "fr": "Demande de réservation",
+  "es": "Solicitud de reserva"
+ },
+ "Fill in your details and we'll reply by email within 24 hours.": {
+  "fr": "Renseignez vos coordonnées et nous vous répondrons par e-mail sous 24 heures.",
+  "es": "Complete sus datos y le responderemos por correo electrónico en 24 horas."
+ },
+ "Full Name": {
+  "fr": "Nom complet",
+  "es": "Nombre completo"
+ },
+ "Email": {
+  "fr": "E-mail",
+  "es": "Correo electrónico"
+ },
+ "Phone (optional)": {
+  "fr": "Téléphone (facultatif)",
+  "es": "Teléfono (opcional)"
+ },
+ "Guests": {
+  "fr": "Voyageurs",
+  "es": "Huéspedes"
+ },
+ "Check-in": {
+  "fr": "Arrivée",
+  "es": "Entrada"
+ },
+ "Check-out": {
+  "fr": "Départ",
+  "es": "Salida"
+ },
+ "Message (optional)": {
+  "fr": "Message (facultatif)",
+  "es": "Mensaje (opcional)"
+ },
+ "Send Booking Request": {
+  "fr": "Envoyer la demande de réservation",
+  "es": "Enviar solicitud de reserva"
+ },
+ "Prefer to book elsewhere?": {
+  "fr": "Vous préférez réserver ailleurs ?",
+  "es": "¿Prefiere reservar en otro sitio?"
+ },
+ "Casa Bö is also listed on Airbnb and Vrbo, with instant booking and their standard protections.": {
+  "fr": "Casa Bö est aussi proposée sur Airbnb et Vrbo, avec réservation instantanée et leurs protections habituelles.",
+  "es": "Casa Bö también está en Airbnb y Vrbo, con reserva instantánea y sus protecciones habituales."
+ },
+ "Book on Airbnb": {
+  "fr": "Réserver sur Airbnb",
+  "es": "Reservar en Airbnb"
+ },
+ "View on Vrbo": {
+  "fr": "Voir sur Vrbo",
+  "es": "Ver en Vrbo"
+ },
+ "<span>Check-in</span><span>From 4:00 pm</span>": {
+  "fr": "<span>Arrivée</span><span>À partir de 16 h</span>",
+  "es": "<span>Entrada</span><span>Desde las 16:00</span>"
+ },
+ "<span>Check-out</span><span>Before 10:00 am</span>": {
+  "fr": "<span>Départ</span><span>Avant 10 h</span>",
+  "es": "<span>Salida</span><span>Antes de las 10:00</span>"
+ },
+ "<span>Max guests</span><span>8</span>": {
+  "fr": "<span>Voyageurs max.</span><span>8</span>",
+  "es": "<span>Máx. huéspedes</span><span>8</span>"
+ },
+ "<span>Response time</span><span>Within 24 hrs</span>": {
+  "fr": "<span>Délai de réponse</span><span>Sous 24 h</span>",
+  "es": "<span>Tiempo de respuesta</span><span>En 24 h</span>"
+ },
+ "Tell us about your trip...": {
+  "fr": "Parlez-nous de votre voyage...",
+  "es": "Cuéntenos sobre su viaje..."
+ },
+ "Book Your Stay": {
+  "fr": "Réservez votre séjour",
+  "es": "Reserve su estancia"
+ },
+ "js:Opening your email app to send the request...": {
+  "fr": "Ouverture de votre application e-mail pour envoyer la demande...",
+  "es": "Abriendo su aplicación de correo para enviar la solicitud..."
+ },
+ "Your private": {
+  "fr": "Votre",
+  "es": "Su"
+ },
+ "The|kitchen.em_word": {
+  "fr": "La",
+  "es": "La"
+ },
+ "The|living.em_word": {
+  "fr": "Le",
+  "es": "La"
+ },
+ "The|space.title": {
+  "fr": "L'",
+  "es": "El"
+ },
+ "Where You'll": {
+  "fr": "Où vous",
+  "es": "Donde"
+ }
+}

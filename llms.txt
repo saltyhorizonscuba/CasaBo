@@ -14,4 +14,4 @@
 - Sleeps: up to 8 guests, 3 bedrooms
 - Check-in from 4:00 pm, check-out before 10:00 am
 - Airports: Liberia (LIR) about 1.5 hours, San José (SJO) about 4.5 hours
-- Languages on site: English, Spanish, French
+- Languages on site: English (default), Spanish and French, each with its own URL: https://casabotamarindo.com/es/ and https://casabotamarindo.com/fr/ (same page names, e.g. /fr/the-space.html)

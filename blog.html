@@ -183,13 +183,6 @@ nav{position:fixed;top:20px;left:50%;transform:translateX(-50%);z-index:300;widt
 </section>
 
 <!-- LANG SWITCHER -->
-<div class="lang-switcher">
-  <button class="lang-btn active" aria-label="English" onclick="setLang('en')">EN</button>
-  <div class="lang-sep"></div>
-  <button class="lang-btn" aria-label="Español" onclick="setLang('es')">ES</button>
-  <div class="lang-sep"></div>
-  <button class="lang-btn" aria-label="Français" onclick="setLang('fr')">FR</button>
-</div>
 
 <script>
 
@@ -214,15 +207,6 @@ document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;});
   ring.style.left=rx+'px';ring.style.top=ry+'px';
   requestAnimationFrame(loop);
 })();
-
-/* LANGUAGE SWITCHER (page text is English only; choice is remembered across pages) */
-function setLang(lang){
-  try{localStorage.setItem('cb-lang',lang);}catch(e){}
-  document.querySelectorAll('.lang-btn').forEach(b=>b.classList.toggle('active',b.textContent===lang.toUpperCase()));
-}
-document.addEventListener('DOMContentLoaded',()=>{
-  try{const l=localStorage.getItem('cb-lang');if(l)setLang(l);}catch(e){}
-});
 
 /* BOOK NOW: letters turn red one by one under the cursor */
 (function(){
