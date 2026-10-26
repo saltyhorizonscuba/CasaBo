@@ -241,6 +241,29 @@ nav{position:fixed;top:20px;left:50%;transform:translateX(-50%);z-index:300;widt
   .lang-sep{width:1px;height:14px;}
   .lang-btn{padding:10px 8px;}
 }
+
+/* MOBILE NAV (burger menu) */
+.nav-burger{display:none;}
+#mobile-menu{display:none;}
+@media(max-width:960px){
+  .nav-links-left{display:none !important;}
+  .nav-burger{display:flex;flex-direction:column;justify-content:center;gap:5px;width:44px;height:44px;background:none;border:0;cursor:pointer;justify-self:start;padding:0 10px;margin-left:-8px;}
+  .nav-burger span{display:block;height:1.5px;background:var(--cream,#FAF8F4);transition:transform .25s,opacity .2s;}
+  .nav-burger[aria-expanded="true"] span:nth-child(1){transform:translateY(6.5px) rotate(45deg);}
+  .nav-burger[aria-expanded="true"] span:nth-child(2){opacity:0;}
+  .nav-burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg);}
+  #mobile-menu{display:block;position:fixed;top:72px;left:16px;right:16px;z-index:290;background:var(--ink,#1A1814);border-radius:28px;padding:10px 8px;box-shadow:0 12px 40px rgba(26,24,20,.35);opacity:0;visibility:hidden;transform:translateY(-8px);transition:opacity .25s,transform .25s,visibility .25s;}
+  #mobile-menu.open{opacity:1;visibility:visible;transform:none;}
+  #mobile-menu a{display:flex;align-items:center;min-height:48px;padding:0 20px;color:rgba(250,248,244,.85);text-decoration:none;font-family:var(--sans);font-size:1rem;font-weight:300;letter-spacing:.08em;border-radius:20px;}
+  #mobile-menu a.active{color:var(--teal,#2BBFB3);}
+  #mobile-menu a:active{background:rgba(250,248,244,.08);}
+  .nav-cta{padding:11px 16px !important;}
+  .lang-btn{padding:13px 10px !important;}
+}
+@media(max-width:699px){
+  .page-hero{padding-top:128px !important;}
+  .side-menu a,.side-menu a.on-dark{padding-top:11px !important;padding-bottom:11px !important;}
+}
 </style>
 </head>
 <body>
@@ -249,6 +272,7 @@ nav{position:fixed;top:20px;left:50%;transform:translateX(-50%);z-index:300;widt
 
 <!-- NAV -->
 <nav>
+  <button class="nav-burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span><span></span></button>
   <ul class="nav-links-left">
     <li><a href="index.html" data-i18n="nav.villa">Home</a></li>
     <li><a href="the-space.html" class="active" data-i18n="nav.gallery">The Space</a></li>
@@ -265,6 +289,14 @@ nav{position:fixed;top:20px;left:50%;transform:translateX(-50%);z-index:300;widt
     <a href="book.html" class="nav-cta" data-i18n="nav.book">Book Now</a>
   </div>
 </nav>
+<div id="mobile-menu">
+  <a href="index.html" data-i18n="nav.villa">Home</a>
+  <a href="the-space.html" class="active" aria-current="page" data-i18n="nav.gallery">The Space</a>
+  <a href="services.html" data-i18n="nav.services">Services</a>
+  <a href="location.html" data-i18n="nav.location">Location</a>
+  <a href="blog.html" data-i18n="nav.blog">Blog</a>
+  <a href="book.html" data-i18n="nav.book">Book Now</a>
+</div>
 
 <!-- SIDE MENU -->
 <aside class="side-menu" aria-label="Page sections">
@@ -492,11 +524,11 @@ nav{position:fixed;top:20px;left:50%;transform:translateX(-50%);z-index:300;widt
 
 <!-- LANG SWITCHER -->
 <div class="lang-switcher">
-  <button class="lang-btn active" onclick="setLang('en')">EN</button>
+  <button class="lang-btn active" aria-label="English" onclick="setLang('en')">EN</button>
   <div class="lang-sep"></div>
-  <button class="lang-btn" onclick="setLang('es')">ES</button>
+  <button class="lang-btn" aria-label="Español" onclick="setLang('es')">ES</button>
   <div class="lang-sep"></div>
-  <button class="lang-btn" onclick="setLang('fr')">FR</button>
+  <button class="lang-btn" aria-label="Français" onclick="setLang('fr')">FR</button>
 </div>
 
 <!-- LIGHTBOX -->
@@ -508,6 +540,18 @@ nav{position:fixed;top:20px;left:50%;transform:translateX(-50%);z-index:300;widt
 </div>
 
 <script>
+
+/* MOBILE MENU */
+(function(){
+  const b=document.querySelector('.nav-burger'),m=document.getElementById('mobile-menu');
+  if(!b||!m)return;
+  function set(o){m.classList.toggle('open',o);b.setAttribute('aria-expanded',o);b.setAttribute('aria-label',o?'Close menu':'Open menu');}
+  b.addEventListener('click',e=>{e.stopPropagation();set(!m.classList.contains('open'));});
+  m.addEventListener('click',e=>{if(e.target.closest('a'))set(false);});
+  document.addEventListener('click',e=>{if(!m.contains(e.target))set(false);});
+  document.addEventListener('keydown',e=>{if(e.key==='Escape')set(false);});
+})();
+
 const T = {
   en:{
     'menu.title':'On this page','menu.pool':'Pool','menu.bedrooms':'Bedrooms','menu.kitchen':'Kitchen','menu.living':'Living Room','menu.amenities':'Amenities',
