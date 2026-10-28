@@ -793,10 +793,12 @@ document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;});
     occ.addEventListener('touchend',release,{passive:true});
     occ.addEventListener('touchcancel',release,{passive:true});
     new IntersectionObserver(e=>{visible=e[0].isIntersecting;}).observe(occ);
-    (function tick(){
+    let last=0;
+    (function tick(now){
+      const dt=Math.min(now-last||16,50);last=now;
       if(!reduce&&visible&&!paused&&mq.matches){
         const loop=cards[cards.length-1].offsetLeft+cards[cards.length-1].offsetWidth+12-cards[0].offsetLeft;
-        pos+=.45;if(pos>=loop)pos-=loop;
+        pos+=dt*.028;if(pos>=loop)pos-=loop;
         occ.scrollLeft=pos;
       }
       requestAnimationFrame(tick);
